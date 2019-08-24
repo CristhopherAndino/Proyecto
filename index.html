@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Que Oferton!</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="imagenes/logo-conejo-pestana.ico">
+</head>
+<body class="col-lg-12 container">
+    <hr class="linea-r">
+    <div class="barra"> 
+        <center>
+                <img class="logo text-center" src="imagenes/logo-conejo.png">
+                <img class="logo text-center" src="imagenes/logo.jpg">
+                <button class="boton text-center ocultar" id="bInicio">Inicio</button>
+                <button class="boton text-center" id="inicioIndex">Iniciar secion</button>
+                <button class="boton text-center" id="abrir2">Registrar Usuario</button>
+                <button class="boton text-center" id="abrir3">Registro Empresas</button>
+                <button onclick="location='paginas/muro.html'" class="boton text-center" >Ver Ofertones!</button>
+                <button class="boton text-center" id="abrirPromo">Plan de pagos</button>
+        </center>            
+    </div>
+    <hr class="linea-r">
+    <br>
+
+    <div class="usuario-r ocultar" id="usuario">  
+            <center> 
+                <br>     
+                <header>
+                        <u><h2>Crear cuenta</h2></u><br>
+                </header>
+        
+                <h4>Nombre</h4><br>
+                <input class="input1" type="text"><br>
+    
+                <h4>Apellido</h4><br>
+                <input class="input1" type="text"><br>
+    
+                <h4>Fecha de nacimiento</h4><br>
+                <input class="input1" type="date"><br>
+    
+                <h4>Genero</h4><br>
+                <select class="input1">
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">No Binario</option>
+                </select><br>
+        
+                <h4>Pais</h4><br>
+                <select class="input1">
+                    <option value="1">Honduras</option>
+                    <option value="2">Guatemala</option>
+                    <option value="3">Costarica</option>
+                    <option value="4">Panama</option>
+                    <option value="5">El Salvador</option>
+                    <option value="6">Nicaragua</option>
+                </select><br>
+    
+                <h4>Foto de perfil</h4><br>
+                <input class="input1" type="file"><br>
+        
+                <h4>Correo Electronico</h4><br>
+                <input class="input1" type="email"><br>
+        
+                <h4>Contraseña</h4><br>
+                <input class="input1" type="password"><br>
+            
+                <h4>Confirmar la contraseña</h4><br>
+                <input class="input1" type="password"><br>
+        
+                <input class="input1" type="checkbox">Acepta los terminos y condiciones<br>
+                <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br>
+    
+                <button class="boton2">Crear cuenta en Que Oferton!</button><br>
+            </center>         
+            <br>
+            </div>
+
+            <div class="rEmpresa ocultar" id="empresa">
+                    <br>
+                    <header>
+                            <u><h2>Crear cuenta</h2></u><br>
+                    </header>
+            
+                    <h4>Nombre de la empresa</h4><br>
+                    <input class="input1"  type="text"><br>
+            
+                    <h4>Pais</h4><br>
+                    <select class="input1">
+                        <option value="1">Honduras</option>
+                        <option value="2">Guatemala</option>
+                        <option value="3">Costarica</option>
+                        <option value="4">Panama</option>
+                        <option value="5">El Salvador</option>
+                        <option value="6">Nicaragua</option>
+                    </select><br>
+            
+                    <h4>Dirreccion</h4><br>
+                    <input class="input1"  type="text"><br>
+                    
+                    <h4>Latitud y Logitud</h4><br>
+                    <input class="input1"  type="number" placeholder="Latitud"><input class="input1"  type="number" placeholder="Longitud"><br>
+                    
+                    <h4>Redes Sociales</h4><br>
+                    <input class="input1"  value="" type="text" placeholder="Facebook"><input class="input1"  value="" type="text" placeholder="Instagram"><input class="input1"  value="" type="text" placeholder="Twitter"><br>
+                    
+                    <h4>Telefono</h4><br>
+                    <input class="input1"  type="number"><br>
+            
+                    <h4>Banner</h4><br>
+                    <input class="input1"  type="file" ><br>
+                    
+                    <h4>Logotipo</h4><br> 
+                    <input class="input1"  type="file" ><br>
+            
+                    <h4>Correo Electronico</h4><br>
+                    <input class="input1"  type="email" ><br>
+            
+                    <h4>Contraseña</h4><br>
+                    <input class="input1"  type="password"><br>
+                
+                    <h4>Confirmar la contraseña</h4><br>
+                    <input class="input1"  type="password"><br>
+            
+                    <input class="input1"  type="checkbox">Acepta los terminos y condiciones<br>
+                    <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br>
+                    <button class="boton2">Crear cuenta en Que Oferton!</button><br>
+        </div>
+            <br> 
+
+    <div id="ventana">
+        <div>
+            <center>
+                <h1 >
+                    Quieres enterarte de las mejores promociones sin salir de tu casa?
+                </h1>
+            </center>
+        </div>
+
+            <center>
+                <h2 class="parafo">
+                    Ya no busque más entérate de los mejores ofertones en nuestra página, publicaciones hechas por las mismas tiendas, marcas, restaurantes   y todos sitios de entretenimiento te tu agrado. 
+                    De la mejor forma cómodamente desde tu casa. Date cuenta de los mejores precios ante que todo y cómpralo desde la comodidad de tu casa de una forma segura e intuitiva.
+                </h2>
+                <br>
+                
+                <img src="imagenes/imagen-index.jpg">
+                <br>
+                <h2>
+                        Aparece en el momento justo en el que la gente busca lo que tú ofreces y haz crecer tu negocio. Arma tú mismo la campaña y paga solo cuando hagan clic en tu anuncio,
+                        si deseas tener más visitas en tu sitio web, aumentar las ventas online, recibir más llamadas o incentivar a tus clientes a regresar,
+                        Orienta tus anuncios a clientes de ciertas ciudades, regiones o países, o bien a los que se encuentren dentro de una determinada distancia de tu negocio o tu tienda.
+                    </h2>
+                    <br>
+                <img src="imagenes/imagen-index2.jpg">
+                <br>
+
+                <h2>
+                    Especializada en el diseño de páginas web a medida para empresas. Páginas web profesionales, optimizadas en posicionamiento y con un diseño a medida. Crearemos juntos una imagen impresionante para tu empresa en internet.
+                    Nuestro equipo está formado por expertos en diseño gráfico y creatividad publicitaria que han trabajado en agencias de primer orden.
+                </h2>
+                <br>
+                <img src="imagenes/imagen-index3.jpg">
+
+            </center>
+    </div> 
+            <hr class="linea-r">
+    <div class="barra">
+        <div id="contacto">
+        <center>
+                <h4 class="parafo" id="contacto-index">¿Preguntas? Llama al (504) 2291-1389</h4>
+        </center>
+        </div>
+        <center>
+                <a href="#"><img src="imagenes/imagen-index6.png"></a>
+                <a href="#"><img src="imagenes/imagen-index7.png"></a>
+                <a href="#"><img src="imagenes/imagen-index5.png"></a>
+        </center>
+    </div>
+    <hr class="linea-r">
+
+    <div class="ventanaIndex ocultar" id="ventanaIndex">
+        <div class="popup" id="popup">
+            <a class="cerrarIndex" id="cerrarIndex" href="#">Cerrar</a><br>
+            <u><h2>Iniciar Secion</h2></u><br>        
+            <input class="input1" type="text" placeholder="Correo Electronico"><br>
+            <input class="input1" type="password" placeholder="Contraseña"><br>
+            <button class="boton2">Iniciar Secion</button><br>
+            <span>¿Primera vez en Que Oferton!?</span><button class="boton3" id="abrir4">Registrate Ya</button>
+        </div>
+    </div>
+
+    <div class="ventanaIndex ocultar" id="ventanasPromo">
+        <div class="popup" id="popupPromo">
+                <a class="cerrarIndex" id="cerrarPromo" href="#">Cerrar</a><br>
+            <center>
+                    <h1>Elija Su Plan Favorito</h1>
+            </center>
+            <div class="cBoton">
+                <center>
+            <div>
+                <button id="p1" class="bPromo">Basico</button>
+                <h5>Mes</h5>
+                <h5>USD7.99</h5>
+            </div>
+                </center>
+                <center>
+            <div>
+                <button id="p2" class="bPromo">Estandar</button>
+                <h5>6 Meses</h5>
+                <h5>USD10.99</h5>
+            </div>
+        </center>
+            <center>
+            <div>
+                <button id="p3" class="bPromo">Premium</button>
+                <h5>1 Año</h5>
+                <h5>USD13.99</h5>
+            </div>
+            </center>
+        </div>
+        </div>
+    </div>
+    <script src="js/personales.js"></script>
+</body>
+</html>

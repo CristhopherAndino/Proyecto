@@ -1,0 +1,301 @@
+h2{
+    margin: 0%;
+}
+
+h4{
+    margin: 1%;
+}
+
+p{
+    margin: 0%;
+}
+h5{
+    margin: 0%;
+}
+
+body{
+    margin: 10px;
+}
+
+.barra{
+    border:rgb(240, 48, 48) 3px solid;
+    border-radius: 15px;
+    padding: 10px;   
+    align-items: center;
+    justify-content: center;
+}
+
+.boton{  
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    background: rgb(240, 48, 48);
+    font-size: 1.25em;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #000000;
+    padding: 12px 7px 12px 7px;
+    margin: 0px 15px 0px 15px;
+
+}
+
+.boton2{
+    background: rgb(240, 48, 48);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.boton3{
+    background: #0099ff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1%;
+}
+
+.linea-r{
+    background:  rgb(240, 48, 48);
+    padding: 1px;
+    border-radius: 15px;
+}
+
+.logo{
+    margin: 0px; 
+}
+
+.usuario-r{
+    border:rgb(240, 48, 48) 3px solid;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0% 0% 0% 30%;
+}
+
+.ocultar{
+    visibility: hidden;
+    position: absolute;
+    display: none;
+}
+
+.input1{
+    text-align: center;
+    border:rgb(240, 48, 48) 3px solid;
+    border-radius: 5px;  
+    padding: 7px 10px 7px 10px;  
+    margin: 0px 5px 13px 5px;
+}
+
+.letrasR{
+    color: rgb(240, 48, 48);
+}
+
+.tCondiciones{
+    border:rgb(240, 48, 48) 3px solid;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0% 0% 0% 30%;
+    padding: 3%;
+}
+
+.rEmpresa{
+    border:rgb(240, 48, 48) 3px solid;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0% 0% 0% 30%;
+    text-align: center;
+}
+
+.cBoton{
+    display: flex;
+}
+
+.bPromo{
+    background: rgb(240, 48, 48);
+    margin: 0px 50px 0px 50px;
+    padding: 60px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.muro{
+display: flex;
+}
+
+.noti{
+    border: rgb(240, 48, 48)2px solid;
+    border-radius: 10px;
+margin: 10px 300px 10px 10px;
+padding: 10px;
+width: 30%;
+text-align: center;
+display: static;
+}
+
+.publicaciones{
+    border: rgb(0, 247, 255)2px solid;
+    border-radius: 10px;
+    margin: 10px 10px 10px 300px;
+padding: 10px;
+width: 70%;
+text-align: center;
+}
+
+.Buscar{
+    border: #000000 1px solid;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ventanaIndex{
+    background: rgb(0, 0,0,0.3);
+    position: fixed !important;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    visibility: hidden;
+}
+
+.ventanaIndex.activo{
+    visibility: visible;
+}
+
+.popup{
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 0.3);
+    font-family: 3px;
+    text-align: center;
+    padding: 20px;
+    width: 600px;
+    border: #000000 3px solid;
+    border-radius: 15px;
+    transition: 1s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .cerrarIndex{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #000000;
+    transition: .3s ease all;
+}
+
+.popup.activo{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.A{
+    width: 900px !important;
+}
+
+.B{
+    display: flex;
+}
+
+.C{
+    width: 50%;
+    margin: 0% 0% 0% 25%;
+    background: #000000 3px solid;
+}
+
+.cajaEmpresa{
+    border: #0099ff 3px solid;
+    width: 50%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cajaEmpresa2{
+    width: 97%;
+}
+
+.cajaEmpresa3{
+    width: 50%;
+}
+
+.boton:hover{
+    color: white;
+    background: #000000;
+}
+
+.boton2:hover{
+    color: white;
+    background: #000000;
+}
+
+.bPromo:hover{
+   border-radius: 100%; 
+   color: white;
+    background: #000000;
+}
+
+.input1:hover{
+    border:black 3px solid;
+}
+
+.Buscar:hover{
+    border: rgb(0, 247, 255) 1px solid;
+
+}
+
+.botonEmpresa{
+    background: rgb(240, 48, 48);
+    border-radius: 100px;
+    margin:0px 10px 0px 0px;
+}
+
+.cajaEmpresa:hover{
+    border: black 3px solid;
+}
+
+.input2{
+    padding: 0px 100px 90px 0px;
+    border: #0099ff 3px solid;
+    border-radius: 5px;
+}
+
+.input2:hover{
+    border: black 3px solid;
+}
+
+.D{
+    margin: 0px 0px 0px 400px;
+}
+
+.F{
+    border: #000000 3px solid;
+    border-radius: 5px;
+}
+
+
+#perfil{
+    background: rgb(240, 48, 48);
+    border-radius: 100%;
+    padding: 1px 10px 0px 10px;
+    margin: 0px 0px 0px 900px;
+}
+
+#conejo-muro{
+    margin: 0px 0px 0px 30px !important;
+}
+
+#logo-muro{
+    margin: 0px 30px 0px 0px !important;
+}
+
+#barraM{
+    background:white;
+}
+
+#botonpromocionEmpresa{
+    margin: 0px 10px 0px 600px;
+}
+
+

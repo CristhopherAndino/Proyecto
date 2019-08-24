@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Que Oferton!</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../imagenes/logo-conejo-pestana.ico">
+</head>
+<body>
+    <div id="barraM">
+        <hr class="linea-r">
+        <div class="barra"> 
+                    <img onclick="location='../index.html'" class="logo" id="conejo-muro" src="../imagenes/logo-conejo.png">
+                    <img onclick="location='../index.html'" class="logo" id="logo-muro" src="../imagenes/logo.jpg">
+                    <input class="Buscar" type="text" placeholder="Buscar" > 
+                    <button id="perfil"><img src="../imagenes/imagen-muro.png"></button>    
+        </div>
+        <hr class="linea-r">
+    </div>
+        <br>
+        <div class="usuario-r ocultar" id="usuarioMuro">  
+            <center> 
+                <br>     
+                <header>
+                        <u><h2>Crear cuenta</h2></u><br>
+                </header>
+        
+                <h4>Nombre</h4><br>
+                <input class="input1" type="text"><br>
+    
+                <h4>Apellido</h4><br>
+                <input class="input1" type="text"><br>
+    
+                <h4>Fecha de nacimiento</h4><br>
+                <input class="input1" type="date"><br>
+    
+                <h4>Genero</h4><br>
+                <select class="input1">
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">No Binario</option>
+                </select><br>
+        
+                <h4>Pais</h4><br>
+                <select class="input1">
+                    <option value="1">Honduras</option>
+                    <option value="2">Guatemala</option>
+                    <option value="3">Costarica</option>
+                    <option value="4">Panama</option>
+                    <option value="5">El Salvador</option>
+                    <option value="6">Nicaragua</option>
+                </select><br>
+    
+                <h4>Foto de perfil</h4><br>
+                <input class="input1" type="file"><br>
+        
+                <h4>Correo Electronico</h4><br>
+                <input class="input1" type="email"><br>
+        
+                <h4>Contraseña</h4><br>
+                <input class="input1" type="password"><br>
+            
+                <h4>Confirmar la contraseña</h4><br>
+                <input class="input1" type="password"><br>
+        
+                <input class="input1" type="checkbox">Acepta los terminos y condiciones<br>
+                <a href="terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br><br>
+                <button class="boton2">Crear cuenta en Que Oferton!</button><br>
+            </center>         
+            <br>
+            </div>
+            <br>
+
+        <div class="muro col-6" id="muroT">
+            <div class="publicaciones">
+                <p>
+                    </p>
+            </div>
+            <div class="noti">
+                <u><h2>Notificaciones</h2></u><br>
+                <p>Quieres Ver Tus Notificaciones?</p><br>
+                <button class="boton2" id="botonInicioMuro">Iniciar Seccion</button>
+            </div>
+        </div>
+
+        <hr class="linea-r">
+        <center>
+        <u><h3>Fin De Los Ofertones!</h3></u>
+    </center>
+        <hr class="linea-r">
+        <div class="ventanaIndex ocultar" id="muroSeccion">
+            <div class="popup" id="muroPopup">
+                    <a class="cerrarIndex" id="cerrarMuro" href="#">Cerrar</a><br>
+                <u><h2>Iniciar Secion</h2></u><br>        
+                <input class="input1" type="text" placeholder="Correo Electronico"><br>
+                <input class="input1" type="password" placeholder="Contraseña"><br>
+                <button class="boton2">Iniciar Secion</button><br>
+                <span>¿Primera vez en Que Oferton!?</span><button class="boton3" id="abrirRegistroMuro">Registrate Ya</button>
+            </div>
+        </div>
+        <script src="../js/muro.js"></script>
+</body>
+</html>

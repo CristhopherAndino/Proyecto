@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empresa</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../imagenes/logo-conejo-pestana.ico">
+</head>
+<body>
+        <hr class="linea-r">
+        <div class="barra"> 
+            <center>
+                    <img onclick="location='../index.html'" class="logo text-center" src="../imagenes/logo-conejo.png">
+                    <img onclick="location='../index.html'" class="logo text-center" src="../imagenes/logo.jpg">
+                    <button id="botonpromocionEmpresa" class="botonEmpresa" ><img src="../imagenes/subirPromocion.png"></button> 
+                    <button id="botonSubida" class="botonEmpresa"><img src="../imagenes/subir.png"></button> 
+                    <button class="botonEmpresa" id="perfilEmpresa"><img src="../imagenes/imagen-muro.png"></button>    
+
+            </center>            
+        </div>
+        <hr class="linea-r">
+    <br>
+
+    <div class="C">
+        <div class="B">
+        <div class="cajaEmpresa">
+            <div>
+            <center>
+                <h2>Grafica De Segidores</h2><br>
+            </center>
+            </div>
+            
+        </div>
+        <div  class="cajaEmpresa">
+                <center>
+                        <h2>Grafica Ventas</h2><br>
+                    </center>
+        </div>
+    </div>
+        <div class="cajaEmpresa cajaEmpresa2">
+            <center>
+                <h2>Mensajes</h2><br>
+            </center>
+            <p>No tiene mensaje</p>
+        </div>
+    </div>
+
+    <hr class="linea-r">
+
+    <div class="ventanaIndex" id="ventanaEmpresa">
+        <div class="popup" id="popupEmpresa">
+            <center>
+                    <a class="cerrarIndex" id="cerrarEmpresa" href="#">Cerrar</a><br>
+                    <h2>Registrar Oferto!</h2><br>
+                <input class="input1" type="text" placeholder="Porcentaje De Descuento">
+                <input class="input1" type="text" placeholder="Presio Real"><br>
+                <input class="input1" type="text" placeholder="Precio De Oferto!"><br>
+                <h6>Fecha De Efectividad</h6><br>
+                <p>Fecha De Inicio</p>
+                <input class="input1" type="date"><br>
+                <p>Fecha Final</p>
+                <input class="input1" type="date">
+                <h6>Elejir Surcusales</h6><br>
+                <div class="cajaEmpresa3 cajaEmpresa">
+                        <p>No Hay Surcusales</p><br>
+                </div>
+                <h6>Elejir Producto</h6><br>
+            <div class="cajaEmpresa3 cajaEmpresa">
+                <p>No Hay Productos</p><br>
+            </div>
+            </center>
+        </div>
+    </div>
+
+    <div class="ventanaIndex" id="ventanaSubir">
+        <div class="popup" id="popupSubida">
+            <a class="cerrarIndex" id="cerrarSubida" href="#">Cerrar</a><br>
+            <center>
+            <h2>Registro De Productos</h2><br>
+            <input class="input1" type="text" placeholder="Nombre">
+            <input class="input1" type="text" placeholder="Presio"><br>
+            <h6>Fotografia</h6>
+            <input class="input1" type="file"><br>
+            <input class="input2" type="text" placeholder="informacion"><br><br>
+        </center>
+        </div>
+    </div>
+
+    <div class="ventanaIndex" id="ventanaPerfil">
+        <div class="popup" id="popupPerfil">
+                <a class="cerrarIndex" id="cerrarEmpresaPerfil" href="#">Cerrar</a><br>
+            <center>
+                    
+                    <img src="../imagenes/imagen-muro.png"></button><br><br>
+                    <h5>Nombre:</h5><br>
+                    <h6>De Todo</h6><br>
+                    <h5>Plan:</h5><br>
+                    <button id="p3" class="bPromo">Premium</button>
+                    <h5>1 Año</h5>
+                    <h5>USD13.99</h5><br>
+                    <h5>Sucursales:</h5><br>
+                    <h6>city moll segundo nivel tersera tienda a la derecha</h6>
+                                   
+            </center>
+            <a class="cerrarIndex" id="editarEmpresa" href="#">Editar</a><br>
+        </div>
+    </div>
+
+    <script src="../js/empresa.js"></script>
+</body>
+</html>
