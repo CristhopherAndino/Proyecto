@@ -1,4 +1,30 @@
-var abrir2 = document.getElementById('abrir2'),
+var fContraseña2E = document.getElementById('fContraseña2E'),
+fContraseñaE = document.getElementById('fContraseñaE'),
+fCorreoE = document.getElementById('fCorreoE'),
+fTelefonoE = document.getElementById('fTelefonoE'), 
+fFacebookE = document.getElementById('fFacebookE'),
+fInstagramE = document.getElementById('fInstagramE'),
+fTwitterE = document.getElementById('fTwitterE'),
+fLatitudE = document.getElementById('fLatitudE'),
+fLongitudE = document.getElementById('fLongitudE'),
+fDirreccionE = document.getElementById('fDirreccionE'),
+fPaisE = document.getElementById('fPaisE'),  
+fNombreE = document.getElementById('fNombreE'),
+correoI = document.getElementById('correoI'),
+fContraI = document.getElementById('fContraI'),
+fcorreoI = document.getElementById('fcorreoI'), 
+fContra3 = document.getElementById('fContra3'),
+fTerminos = document.getElementById('fTerminos'),
+fPais = document.getElementById('fPais'),
+generoU = document.getElementById('generoU'),
+fContra2 = document.getElementById('fContra2'),
+fContra = document.getElementById('fContra'),
+fCorreo = document.getElementById('fCorreo'),
+fNacimiento = document.getElementById('fNacimiento'),
+fApellido = document.getElementById('fApellido'),
+fNombre = document.getElementById('fNombre'),
+usuario = document.getElementById('usuario'),
+abrir2 = document.getElementById('abrir2'),
 ventana = document.getElementById('ventana'),
 usuario = document.getElementById('usuario'),
 bInicio = document.getElementById('bInicio'),
@@ -11,7 +37,7 @@ ventanaIndex = document.getElementById('ventanaIndex'),
 popup = document.getElementById('popup'),
 cerrarIndex = document.getElementById('cerrarIndex'),
 ventanasPromo = document.getElementById('ventanasPromo'),
-popupPromo = document.getElementById('popupPromo')
+popupPromo = document.getElementById('popupPromo'),
 abrirPromo = document.getElementById('abrirPromo'),
 cerrarPromo = document.getElementById('cerrarPromo'),
 p1 = document.getElementById('p1'),
@@ -118,3 +144,134 @@ p3.addEventListener('click', function(){
     usuario.classList.add('ocultar');
     abrir2.classList.remove('ocultar');
 });
+
+//validar registro//
+function ValidarUsuario(){
+    if (usuario.nombreU.value == "") {
+        fNombre.classList.remove('ocultar');
+    }else{
+        fNombre.classList.add('ocultar');
+    }
+    if (usuario.apellidoU.value == "") {
+        fApellido.classList.remove('ocultar');
+    }else{
+        fApellido.classList.add('ocultar');
+    }
+    if (usuario.nacimientoU.value == "") {
+        fNacimiento.classList.remove('ocultar');
+    }else{
+        fNacimiento.classList.add('ocultar');
+    }
+    if (usuario.correoU.value == "") {
+        fCorreo.classList.remove('ocultar');
+    }else{
+        fCorreo.classList.add('ocultar');
+    }
+    if (usuario.contraU.value == "") {
+        fContra.classList.remove('ocultar');
+    }else{
+        fContra.classList.add('ocultar');
+    }
+    if (usuario.contraU2.value == "") {
+        fContra2.classList.remove('ocultar');
+    }else{
+        fContra2.classList.add('ocultar');
+    }
+    if (usuario.generoU.value == 0) {
+        fGenero.classList.remove('ocultar');
+    }else{
+        fGenero.classList.add('ocultar');
+    }
+    if (usuario.paisU.value == 0) {
+        fPais.classList.remove('ocultar');
+    }else{
+        fPais.classList.add('ocultar');
+    }
+    if(usuario.contraU.value != usuario.contraU2.value){
+        fContra3.classList.remove('ocultar');
+    }
+    
+}
+
+function ValidarInicio(){
+    if(correoI.value == ""){
+        fcorreoI.classList.remove('ocultar');
+    }else{
+        fcorreoI.classList.add('ocultar');
+    }
+    if(contraI.value == ""){
+        fContraI.classList.remove('ocultar');
+    }else{
+        fContraI.classList.add('ocultar');
+    }
+}
+function ValidarEmpresa(){
+    if(empresa.nombreE.value == ""){
+        fNombreE.classList.remove("ocultar");  
+    }else{
+        fNombreE.classList.add("ocultar");
+    }
+    if(empresa.paisE.value == 0){
+        fPaisE.classList.remove("ocultar");  
+    }else{
+        fPaisE.classList.add("ocultar");
+    }
+    if(empresa.dirreccionE.value == ""){
+        fDirreccionE.classList.remove("ocultar");  
+    }else{
+        fDirreccionE.classList.add("ocultar");
+    }
+    if(empresa.longitudE.value == ""){
+        fLongitudE.classList.remove("ocultar");  
+    }else{
+        fLongitudE.classList.add("ocultar");
+    }
+    if(empresa.latitudE.value == ""){
+        fLatitudE.classList.remove("ocultar");  
+    }else{
+        fLatitudE.classList.add("ocultar");
+    }
+    if(empresa.facebookE.value == ""){
+        fFacebookE.classList.remove("ocultar");  
+    }else{
+        fFacebookE.classList.add("ocultar");
+    }
+    if(empresa.InstagramE.value == ""){
+        fInstagramE.classList.remove("ocultar");  
+    }else{
+        fInstagramE.classList.add("ocultar");
+    }
+    if(empresa.TwitterE.value == ""){
+        fTwitterE.classList.remove("ocultar");  
+    }else{
+        fTwitterE.classList.add("ocultar");
+    }
+    if(empresa.telefonoE.value == ""){
+        fTelefonoE.classList.remove("ocultar");  
+    }else{
+        fTelefonoE.classList.add("ocultar");
+    }
+    if(empresa.correoE.value == ""){
+        fCorreoE.classList.remove("ocultar");  
+    }else{
+        fCorreoE.classList.add("ocultar");
+    }
+    if(empresa.correo1E.value == ""){
+        fContraseñaE.classList.remove("ocultar");  
+    }else{
+        fContraseñaE.classList.add("ocultar");
+    }
+    if(empresa.correo2E.value == ""){
+        fContraseña2E.classList.remove("ocultar");  
+    }else{
+        fContraseña2E.classList.add("ocultar");
+    }
+    if(empresa.correo2E.value != empresa.correo1E.value){
+        fVerificacionE.classList.remove('ocultar');
+    }else{
+        fVerificacionE.classList.add('ocultar');
+    }
+   
+    
+}
+
