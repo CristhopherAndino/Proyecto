@@ -190,8 +190,9 @@ function ValidarUsuario(){
     if(usuario.contraU.value != usuario.contraU2.value){
         fContra3.classList.remove('ocultar');
     }
-    
-}
+    if(usuario.nombreU.value != "" && usuario.apellidoU.value != "" && usuario.nacimientoU.value != "" && usuario.correoU.value != "" && usuario.contraU.value != "" && usuario.contraU2.value != "" && usuario.generoU.value != 0 && usuario.paisU.value != 0){
+        
+    }
 
 function ValidarInicio(){
     if(correoI.value == ""){
@@ -271,7 +272,11 @@ function ValidarEmpresa(){
     }else{
         fVerificacionE.classList.add('ocultar');
     }
-   
+    if(empresa.nombreE.value != "" && empresa.paisE.value != 0 && empresa.dirreccionE.value != "" && empresa.longitudE.value != "" && empresa.latitudE.value != "" && empresa.facebookE.value != "" && empresa.InstagramE.value != "" && empresa.TwitterE.value != "" && empresa.telefonoE.value != "" && empresa.correoE.value != "" && empresa.correo1E.value != "" && empresa.correo2E.value != ""){
+        setTimeout('location="paginas/verificacionE.html"', 500);
+
+    }
     
+}
 }
 

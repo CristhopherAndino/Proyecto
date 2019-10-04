@@ -1,0 +1,17 @@
+.contenedor{
+    margin: 10px 10px 10px 55px;
+    padding: 10px;
+    width: 45%;
+    border: rgb(0, 0, 0)2px solid;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.caja{
+    display: flex;
+}
+
+.letras{
+    padding: 1% 21% 1% 21%;
+}

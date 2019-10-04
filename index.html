@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Que Oferton!</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="imagenes/logo-conejo-pestana.ico">
 </head>
@@ -26,7 +26,7 @@
     <hr class="linea-r">
     <br>
 
-    <form class="usuario-r ocultar" id="usuario">  
+    <form class="usuario-r ocultar" id="usuario" name="usuario">  
             <center> 
                 <br>     
                 <header>
@@ -34,55 +34,55 @@
                 </header>
         
                 <h4>Nombre</h4><br>
-                <input id="nombreU" class="input1" type="text"><br>
+                <input required="" minlength="4" maxlength="25" id="nombreU" name="nombreU" class="input1" type="text"><br>
                 <p class="falta ocultar" id="fNombre">Falta El Nombre</p>
     
                 <h4>Apellido</h4><br>
-                <input id="apellidoU" class="input1" type="text"><br>
+                <input required="" minlength="3" maxlength="25" id="apellidoU" name="apellidoU" class="input1" type="text"><br>
                 <p class="falta ocultar" id="fApellido">Falta El Apellido</p>
     
                 <h4>Fecha de nacimiento</h4><br>
-                <input id="nacimientoU" class="input1" type="date"><br>
+                <input required="" id="nacimientoU" name="nacimientoU" class="input1" type="date"><br>
                 <p class="falta ocultar" id="fNacimiento">Falta La Fecha De Nacimiento</p>
     
                 <h4>Genero</h4><br>
-                <select id="generoU" class="input1">
+                <select required="" id="generoU" name="generoU" class="input1">
                     <option value="0">VACIO</option>
-                    <option value="1">Hombre</option>
-                    <option value="2">Mujer</option>
-                    <option value="3">No Binario</option>
+                    <option value="Masculino">Hombre</option>
+                    <option value="Femenino">Mujer</option>
+                    <option value="No Binario">No Binario</option>
                 </select><br>
                 <p class="falta ocultar" id="fGenero">Falta El Genero</p>
         
                 <h4>Pais</h4><br>
-                <select id="paisU" class="input1">
+                <select required="" id="paisU" name="paisU" class="input1">
                     <option value="0">VACIO</option>
-                    <option value="1">Honduras</option>
-                    <option value="2">Guatemala</option>
-                    <option value="3">Costarica</option>
-                    <option value="4">Panama</option>
-                    <option value="5">El Salvador</option>
-                    <option value="6">Nicaragua</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Costa rica">Costa rica</option>
+                    <option value="Panama">Panama</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Nicaragua">Nicaragua</option>
                 </select><br>
                 <p class="falta ocultar" id="fPais">Falta El Pais</p>
     
                 <h4>Foto de perfil</h4><br>
-                <input class="input1" type="file"><br>
+                <input required="" class="input1" type="file"><br>
         
                 <h4>Correo Electronico</h4><br>
-                <input id="correoU" class="input1" type="email"><br>
-                <p class="falta ocultar" id="fCorreo">Falta El Correo</p>
+                <input required=""  id="correoU" name="correoU" class="input1" type="email"><br>
+                <p class="falta ocultar"  id="fCorreo">Falta El Correo</p>
         
                 <h4>Contraseña</h4><br>
-                <input id="contraU" class="input1" type="password"><br>
+                <input required="" minlength="4" maxlength="25" id="contraU" name="contraU" class="input1" type="password"><br>
                 <p class="falta ocultar" id="fContra">Falta El Contraseña</p>
             
                 <h4>Confirmar la contraseña</h4><br>
-                <input id="contraU2" class="input1" type="password"><br>
+                <input required="" minlength="4" maxlength="25" id="contraU2" name="contraU2" class="input1" type="password"><br>
                 <p class="falta ocultar" id="fContra2">Falta Confirmacion De Contraseña</p><br>
                 <p class="falta ocultar" id="fContra3">No Coincide</p><br>
         
-                <input id="terminosU" class="input1" type="checkbox">Acepta los terminos y condiciones<br>
+                <input required="" id="terminosU" name="terminosU" class="input1" type="checkbox">Acepta los terminos y condiciones<br>
                 <p class="falta ocultar" id="fTerminos">Acepte Los Terminos</p><br>
                 <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br><br>
     
@@ -98,12 +98,12 @@
                     </header>
             
                     <h4>Nombre de la empresa</h4><br>
-                    <input id="nombreE" class="input1"  type="text"><br>
+                    <input required="" minlength="4" maxlength="25" id="nombreE" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fNombreE">Falta Nombre</p><br>
                     
             
                     <h4>Pais</h4><br>
-                    <select id="paisE" class="input1">
+                    <select required="" id="paisE" class="input1">
                         <option value="0">Vacio</option>
                         <option value="1">Honduras</option>
                         <option value="2">Guatemala</option>
@@ -115,39 +115,40 @@
                     <p class="falta ocultar" id="fPaisE">Falta Pais</p><br>
             
                     <h4>Dirreccion</h4><br>
-                    <input id="dirreccionE" class="input1"  type="text"><br>
+                    <input required="" required="" id="dirreccionE" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fDirreccionE">Falta Dirreccion</p><br>
                     
                     <h4>Latitud y Logitud</h4><br>
-                    <input class="input1" id="longitudE"  type="number" placeholder="Latitud"><input id="latitudE" class="input1"  type="number" placeholder="Longitud"><br>
+                    <input required="" class="input1" id="longitudE"  type="number" placeholder="Latitud"><input id="latitudE" class="input1"  type="number" placeholder="Longitud"><br>
                     <p class="falta ocultar" id="fLongitudE">Falta Longitud</p><br>
                     <p class="falta ocultar" id="fLatitudE">Falta Latitud</p><br>
 
                     <h4>Redes Sociales</h4><br>
-                    <input class="input1" id="facebookE"  value="" type="text" placeholder="Facebook"><input class="input1" id="InstagramE" value="" type="text" placeholder="Instagram"><input class="input1" id="TwitterE" value="" type="text" placeholder="Twitter"><br>
+                    <input required="" minlength="4" maxlength="25" class="input1" id="facebookE"  value="" type="url" placeholder="Facebook"><input required="" minlength="4" maxlength="25" class="input1" id="InstagramE" value="" type="url" placeholder="Instagram"><input required="" minlength="4" maxlength="25" class="input1" id="TwitterE" value="" type="url" placeholder="Twitter"><br>
                     <p class="falta ocultar" id="fFacebookE">Falta Facebook</p><br>
                     <p class="falta ocultar" id="fInstagramE">Falta Instagram</p><br>
                     <p class="falta ocultar" id="fTwitterE">Falta Twitter</p><br>
+                    
                     <h4>Telefono</h4><br>
-                    <input id="telefonoE" class="input1"  type="number"><br>
+                    <input required="" minlength="4" maxlength="25" id="telefonoE" class="input1"  type="tel"><br>
                     <p class="falta ocultar" id="fTelefonoE">Falta Telefono</p><br>
             
                     <h4>Banner</h4><br>
-                    <input class="input1"  type="file" ><br>
+                    <input required="" class="input1"  type="file" ><br>
                     
                     <h4>Logotipo</h4><br> 
-                    <input class="input1"  type="file" ><br>
+                    <input required="" class="input1"  type="file" ><br>
             
                     <h4>Correo Electronico</h4><br>
-                    <input id="correoE" class="input1"  type="email" ><br>
+                    <input required="" id="correoE" class="input1"  type="url" ><br>
                     <p class="falta ocultar" id="fCorreoE">Falta Correo</p><br>
             
                     <h4>Contraseña</h4><br>
-                    <input id="correo1E" class="input1"  type="password"><br>
+                    <input required="" minlength="4" maxlength="25" id="correo1E" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseñaE">Falta Contraseña</p><br>
                 
                     <h4>Confirmar la contraseña</h4><br>
-                    <input id="correo2E" class="input1"  type="password"><br>
+                    <input required="" minlength="4" maxlength="25" id="correo2E" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseña2E">Falta La Confirmacion</p><br>
                     <p class="falta ocultar" id="fVerificacionE">No Coincide La Contraseña</p><br>
             
@@ -253,6 +254,8 @@
         </div>
     </div>
     <script src="js/personales.js"></script>
-    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+{
+    "name": "dell/php",
+    "description": "Proyecto",
+    "require": {
+        "kreait/firebase-php": "^4.32",
+        "php": ">= 7.2.0"
+    }
+}

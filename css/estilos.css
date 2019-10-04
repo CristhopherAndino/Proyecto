@@ -67,7 +67,7 @@ body{
     border:rgb(240, 48, 48) 3px solid;
     border-radius: 10px;
     width: 600px;
-    margin: 0% 0% 0% 30%;
+    margin: 0% 0% 0% 34%;
 }
 
 .ocultar{
@@ -100,7 +100,7 @@ body{
     border:rgb(240, 48, 48) 3px solid;
     border-radius: 10px;
     width: 600px;
-    margin: 0% 0% 0% 30%;
+    margin: 0% 0% 0% 34%;
     text-align: center;
 }
 
@@ -121,8 +121,8 @@ display: flex;
 }
 
 .noti{
-    border: rgb(240, 48, 48)2px solid;
-    border-radius: 10px;
+border: rgb(240, 48, 48)2px solid;
+border-radius: 10px;
 margin: 10px 300px 10px 10px;
 padding: 10px;
 width: 30%;
@@ -278,7 +278,7 @@ text-align: center;
 }
 
 .falta{
-    color: red;
+    color: black;
     background: #df7070;
     border: #000000 1px solid;
 }
