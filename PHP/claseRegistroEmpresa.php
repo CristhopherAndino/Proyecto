@@ -1,50 +1,66 @@
 <?php
 
-class Usuarios{
+class Empresa{
     private $nombre;
-    private $apellido;
-    private $fecha;
-    private $genero;
     private $pais;
-    private $correo;
-    private $contrasena;
-    private $cContrasena;  
+    private $dirreccion;
+    private $latitud;
+    private $longitud;
+    private $facebook;
+    private $instagram;
+    private $twitter;  
+    private $telefono; 
+    private $correo; 
+    private $contraseña; 
+    private $cContraseña; 
 
     public function __construct(
         $nombre,
-        $apellido,
-        $fecha,
-        $genero,
         $pais,
+        $dirreccion,
+        $latitud,
+        $longitud,
+        $facebook,
+        $instagram,
+        $twitter,
+        $telefono,
         $correo,
-        $contrasena,
-        $cContrasena  
+        $contraseña,
+        $cContraseña  
     ){
         $this->nombre = $nombre;
-        $this->apellido = $apellido;
-        $this->fecha = $fecha;
-        $this->genero = $genero;
         $this->pais = $pais;
+        $this->dirreccion = $dirreccion;
+        $this->latitud = $latitud;
+        $this->longitud = $longitud;
+        $this->facebook = $facebook;
+        $this->instagram = $instagram;
+        $this->twitter = $twitter;
+        $this->telefono = $telefono;
         $this->correo = $correo;
-        $this->contrasena = $contrasena;
-        $this->cContrasena = $cContrasena;
+        $this->contraseña = $contraseña;
+        $this->cContraseña = $cContraseña;
     }
 
     public function data(){
         $registro['nombre']=$this->nombre;
-        $registro['apellido']=$this->apellido;
-        $registro['fecha']=$this->fecha;
-        $registro['genero']=$this->genero;
         $registro['pais']=$this->pais;
+        $registro['dirreccion']=$this->dirreccion;
+        $registro['latitud']=$this->latitud;
+        $registro['longitud']=$this->longitud;
+        $registro['facebook']=$this->facebook;
+        $registro['instagram']=$this->instagram;
+        $registro['twitter']=$this->twitter;
+        $registro['telefono']=$this->telefono;
         $registro['correo']=$this->correo;
-        $registro['contrasena']=$this->contrasena;
-        $registro['cContrasena']=$this->cContrasena;
+        $registro['contraseña']=$this->contraseña;
+        $registro['cContraseña']=$this->cContraseña;
         return $registro;
     }
 
     public function crear($db){
-        $usuario = $this->Data();
-        $resultado = $db->getReference('Empresa')->push($usuario);
+        $empresa = $this->Data();
+        $resultado = $db->getReference('Empresa')->push($empresa);
 
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro almacenado","key":"'.$resultado->getKey().'"}';
@@ -53,28 +69,29 @@ class Usuarios{
         }
     }
 
-    public static function ObtenerUsuarios($db){
+    public static function ObtenerEmpresas($db){
         $resultado = $db->getReference('Empresa')->getSnapshot()->getValue();
         echo json_encode($resultado);
     }
 
-    public function ObtenerUsuario($db, $id){
-        
+    public static function ObtenerEmpresa($db, $id){
+        $resultado = $db->getReference('Empresa')->getChild($id)->getValue();
+        echo json_encode($resultado);
     }
 
-    public static function eliminar($db, $id){
-       $db->getReference('Empresa')->getChild($id)->remove();
-        echo '{"Mensaje":"Se a eliminado el elmento"}';
+    public static function Eliminar($db, $id){
+        $db->getReference('Empresa')->getChild($id)->remove();
+        echo '{"Mensaje":"Registro borrado"}';
     }
 
-    public function actualizar($db,$id){
+    public function acualizar($db, $id){
         $resultado = $db->getReference('Empresa')->getChild($id)->set($this->data());
-
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
         }else{
             return '{"Mensajes":"Error al guardar el registro"}';
         }
     }
+
 }
 ?>

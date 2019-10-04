@@ -1,23 +1,9 @@
-var idG = null;
 (()=>{
     $.ajax({
         url:"../PHP/ajax/usuarios/",
         dataType:"json",
         success:(res)=>{
             llenarTabla(res);
-        },
-        error:(error)=>{
-            console.error(error);
-        }
-    });
-})();
-
-(()=>{
-    $.ajax({
-        url:"../PHP/ajax/empresa/",
-        dataType:"json",
-        success:(res)=>{
-            llenarTabla2(res);
         },
         error:(error)=>{
             console.error(error);
@@ -41,23 +27,6 @@ function llenarTabla(usuarios){
             <button class="boton2" onclick="eliminar('${Indice}')">Eliminar</button>
             <button class="boton3" onclick="editar('${Indice}')">editar</button>
             </th>
-            </tr>`
-        );
-    }
-}
-
-function llenarTabla2(usuarios){
-    $('#tablaRegistros').empty();
-    for (let Indice in usuarios) {
-       
-        $('#tablaRegistro').append(
-            `<tr id="${Indice}">
-            <th>${usuarios[Indice].nombre}</th>
-            <th>${usuarios[Indice].pais}</th>
-            <th>${usuarios[Indice].dirreccion}</th>
-            <th>${usuarios[Indice].telefono}</th>
-            <th>${usuarios[Indice].correo}</th>
-            <th>${usuarios[Indice].contrasena}</th>
             </tr>`
         );
     }
@@ -167,6 +136,3 @@ function edicionC(id) {
         $("#faltaT").removeClass("ocultar");
     }
 }
-
-
-

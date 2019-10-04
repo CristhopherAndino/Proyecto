@@ -59,7 +59,8 @@ class Usuarios{
     }
 
     public function ObtenerUsuario($db, $id){
-        
+        $resultado = $db->getReference('usuarios')->getChild($id)->getValue();
+        echo json_encode($resultado);
     }
 
     public static function eliminar($db, $id){
