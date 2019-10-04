@@ -34,19 +34,19 @@
                 </header>
         
                 <h4>Nombre</h4><br>
-                <input required="" minlength="4" maxlength="25" id="nombreU" name="nombreU" class="input1" type="text"><br>
+                <input required="" minlength="4" maxlength="25" id="nombreU" name="nombre" class="input1" type="text"><br>
                 <p class="falta ocultar" id="fNombre">Falta El Nombre</p>
     
                 <h4>Apellido</h4><br>
-                <input required="" minlength="3" maxlength="25" id="apellidoU" name="apellidoU" class="input1" type="text"><br>
+                <input required="" minlength="3" maxlength="25" id="apellidoU" name="apellido" class="input1" type="text"><br>
                 <p class="falta ocultar" id="fApellido">Falta El Apellido</p>
     
                 <h4>Fecha de nacimiento</h4><br>
-                <input required="" id="nacimientoU" name="nacimientoU" class="input1" type="date"><br>
+                <input required="" id="nacimientoU" name="fecha" class="input1" type="date"><br>
                 <p class="falta ocultar" id="fNacimiento">Falta La Fecha De Nacimiento</p>
     
                 <h4>Genero</h4><br>
-                <select required="" id="generoU" name="generoU" class="input1">
+                <select required="" id="generoU" name="genero" class="input1">
                     <option value="0">VACIO</option>
                     <option value="Masculino">Hombre</option>
                     <option value="Femenino">Mujer</option>
@@ -55,7 +55,7 @@
                 <p class="falta ocultar" id="fGenero">Falta El Genero</p>
         
                 <h4>Pais</h4><br>
-                <select required="" id="paisU" name="paisU" class="input1">
+                <select required="" id="paisU" name="pais" class="input1">
                     <option value="0">VACIO</option>
                     <option value="Honduras">Honduras</option>
                     <option value="Guatemala">Guatemala</option>
@@ -67,18 +67,18 @@
                 <p class="falta ocultar" id="fPais">Falta El Pais</p>
     
                 <h4>Foto de perfil</h4><br>
-                <input required="" class="input1" type="file"><br>
+                <input required="" class="input1" name="foto" type="file"><br>
         
                 <h4>Correo Electronico</h4><br>
-                <input required=""  id="correoU" name="correoU" class="input1" type="email"><br>
+                <input required=""  id="correoU" name="correo" class="input1" type="email"><br>
                 <p class="falta ocultar"  id="fCorreo">Falta El Correo</p>
         
                 <h4>Contraseña</h4><br>
-                <input required="" minlength="4" maxlength="25" id="contraU" name="contraU" class="input1" type="password"><br>
+                <input required="" minlength="4" maxlength="25" id="contraU" name="contrasena" class="input1" type="password"><br>
                 <p class="falta ocultar" id="fContra">Falta El Contraseña</p>
             
                 <h4>Confirmar la contraseña</h4><br>
-                <input required="" minlength="4" maxlength="25" id="contraU2" name="contraU2" class="input1" type="password"><br>
+                <input required="" minlength="4" maxlength="25" id="contraU2" name="cContrasena" class="input1" type="password"><br>
                 <p class="falta ocultar" id="fContra2">Falta Confirmacion De Contraseña</p><br>
                 <p class="falta ocultar" id="fContra3">No Coincide</p><br>
         
@@ -86,7 +86,7 @@
                 <p class="falta ocultar" id="fTerminos">Acepte Los Terminos</p><br>
                 <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br><br>
     
-                <button class="boton2" onclick="ValidarUsuario()">Crear cuenta en Que Oferton!</button><br>
+                <button class="boton2" id="crearU" onclick="ValidarUsuario()">Crear cuenta en Que Oferton!</button><br>
             </center>         
             <br>
         </form>
@@ -257,5 +257,6 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/controladoresSuperUsuario.js"></script>
 </body>
 </html>

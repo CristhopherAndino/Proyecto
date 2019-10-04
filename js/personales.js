@@ -190,9 +190,6 @@ function ValidarUsuario(){
     if(usuario.contraU.value != usuario.contraU2.value){
         fContra3.classList.remove('ocultar');
     }
-    if(usuario.nombreU.value != "" && usuario.apellidoU.value != "" && usuario.nacimientoU.value != "" && usuario.correoU.value != "" && usuario.contraU.value != "" && usuario.contraU2.value != "" && usuario.generoU.value != 0 && usuario.paisU.value != 0){
-        
-    }
 
 function ValidarInicio(){
     if(correoI.value == ""){

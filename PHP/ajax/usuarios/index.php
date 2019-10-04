@@ -14,7 +14,8 @@
             $_POST['pais'],
             $_POST['correo'],
             $_POST['contrasena'],
-            $_POST['cContrasena']
+            $_POST['cContrasena'],
+            $_POST['foto']
         );
         echo $u->crear($database->getDB());
     }
@@ -37,14 +38,14 @@
         parse_str(file_get_contents("php://input"), $_PUT);
 
         $u = new Usuarios(
-            $_PUT['nombre'],
-            $_PUT['apellido'],
-            $_PUT['fecha'],
-            $_PUT['genero'],
-            $_PUT['pais'],
-            $_PUT['correo'],
-            $_PUT['contrasena'],
-            $_PUT['cContrasena']
+            $_PUT['nombreE'],
+            $_PUT['apellidoE'],
+            $_PUT['fechaE'],
+            $_PUT['generoE'],
+            $_PUT['paisE'],
+            $_PUT['correoE'],
+            $_PUT['contrasenaE'],
+            $_PUT['cContrasenaE']
         );
         echo $u->actualizar($database->getDB(), $_GET['id']);
     }
