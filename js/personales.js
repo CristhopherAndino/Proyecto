@@ -190,6 +190,11 @@ function ValidarUsuario(){
     if(usuario.contraU.value != usuario.contraU2.value){
         fContra3.classList.remove('ocultar');
     }
+    if($('#nombreU').val() != "" && $('#apellidoU').val() != "" && $('#nacimientoU').val() != 0 && $('#generoU').val() != 0 && $('#paisU').val() != 0 && $('#correoU').val() != "" && $('#contraU').val() == $('#contraU2').val()){
+        setTimeout('location="paginas/verificacionE.html"', 500);
+
+    }
+}
 
 function ValidarInicio(){
     if(correoI.value == ""){
@@ -254,26 +259,26 @@ function ValidarEmpresa(){
     }else{
         fCorreoE.classList.add("ocultar");
     }
-    if(empresa.correo1E.value == ""){
+    if(empresa.contraEM.value == ""){
         fContraseñaE.classList.remove("ocultar");  
     }else{
         fContraseñaE.classList.add("ocultar");
     }
-    if(empresa.correo2E.value == ""){
+    if(empresa.contraEM.value == ""){
         fContraseña2E.classList.remove("ocultar");  
     }else{
         fContraseña2E.classList.add("ocultar");
     }
-    if(empresa.correo2E.value != empresa.correo1E.value){
+    if(empresa.contraEM.value != empresa.contraEM.value){
         fVerificacionE.classList.remove('ocultar');
     }else{
         fVerificacionE.classList.add('ocultar');
     }
-    if(empresa.nombreE.value != "" && empresa.paisE.value != 0 && empresa.dirreccionE.value != "" && empresa.longitudE.value != "" && empresa.latitudE.value != "" && empresa.facebookE.value != "" && empresa.InstagramE.value != "" && empresa.TwitterE.value != "" && empresa.telefonoE.value != "" && empresa.correoE.value != "" && empresa.correo1E.value != "" && empresa.correo2E.value != ""){
+    if(empresa.nombreE.value != "" && empresa.paisE.value != 0 && empresa.dirreccionE.value != "" && empresa.longitudE.value != "" && empresa.latitudE.value != "" && empresa.facebookE.value != "" && empresa.InstagramE.value != "" && empresa.TwitterE.value != "" && empresa.telefonoE.value != "" && empresa.correoE.value != "" && empresa.contraEM.value != "" && empresa.contraEM.value != ""){
         setTimeout('location="paginas/verificacionE.html"', 500);
 
     }
     
 }
-}
+
 

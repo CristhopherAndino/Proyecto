@@ -98,12 +98,12 @@
                     </header>
             
                     <h4>Nombre de la empresa</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="nombreE" class="input1"  type="text"><br>
+                    <input required="" minlength="4" maxlength="25" id="nombreE" name="nombre" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fNombreE">Falta Nombre</p><br>
                     
             
                     <h4>Pais</h4><br>
-                    <select required="" id="paisE" class="input1">
+                    <select required="" id="paisE" name="pais" class="input1">
                         <option value="0">Vacio</option>
                         <option value="1">Honduras</option>
                         <option value="2">Guatemala</option>
@@ -115,22 +115,22 @@
                     <p class="falta ocultar" id="fPaisE">Falta Pais</p><br>
             
                     <h4>Dirreccion</h4><br>
-                    <input required="" required="" id="dirreccionE" class="input1"  type="text"><br>
+                    <input required="" required="" id="dirreccionE" name="dirreccion" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fDirreccionE">Falta Dirreccion</p><br>
                     
                     <h4>Latitud y Logitud</h4><br>
-                    <input required="" class="input1" id="longitudE"  type="number" placeholder="Latitud"><input id="latitudE" class="input1"  type="number" placeholder="Longitud"><br>
+                    <input required="" class="input1" id="longitudE" name="latitud" type="number" placeholder="Latitud"><input id="latitudE" name="longitud" class="input1"  type="number" placeholder="Longitud"><br>
                     <p class="falta ocultar" id="fLongitudE">Falta Longitud</p><br>
                     <p class="falta ocultar" id="fLatitudE">Falta Latitud</p><br>
 
                     <h4>Redes Sociales</h4><br>
-                    <input required="" minlength="4" maxlength="25" class="input1" id="facebookE"  value="" type="url" placeholder="Facebook"><input required="" minlength="4" maxlength="25" class="input1" id="InstagramE" value="" type="url" placeholder="Instagram"><input required="" minlength="4" maxlength="25" class="input1" id="TwitterE" value="" type="url" placeholder="Twitter"><br>
+                    <input required="" minlength="4" maxlength="25" class="input1" id="facebookE" name="facebook"  value="" type="url" placeholder="Facebook"><input required="" minlength="4" maxlength="25" class="input1" id="InstagramE" name="instagram" value="" type="url" placeholder="Instagram"><input required="" minlength="4" maxlength="25" class="input1" id="TwitterE" name="twitter" value="" type="url" placeholder="Twitter"><br>
                     <p class="falta ocultar" id="fFacebookE">Falta Facebook</p><br>
                     <p class="falta ocultar" id="fInstagramE">Falta Instagram</p><br>
                     <p class="falta ocultar" id="fTwitterE">Falta Twitter</p><br>
                     
                     <h4>Telefono</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="telefonoE" class="input1"  type="tel"><br>
+                    <input required="" minlength="4" maxlength="25" id="telefonoE" name="telefono" class="input1"  type="tel"><br>
                     <p class="falta ocultar" id="fTelefonoE">Falta Telefono</p><br>
             
                     <h4>Banner</h4><br>
@@ -140,21 +140,21 @@
                     <input required="" class="input1"  type="file" ><br>
             
                     <h4>Correo Electronico</h4><br>
-                    <input required="" id="correoE" class="input1"  type="url" ><br>
+                    <input required="" id="correoE" name="correo" class="input1"  type="url" ><br>
                     <p class="falta ocultar" id="fCorreoE">Falta Correo</p><br>
             
                     <h4>Contraseña</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="correo1E" class="input1"  type="password"><br>
+                    <input required="" minlength="4" maxlength="25" id="contraEM" name="contraseña" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseñaE">Falta Contraseña</p><br>
                 
                     <h4>Confirmar la contraseña</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="correo2E" class="input1"  type="password"><br>
+                    <input required="" minlength="4" maxlength="25" id="contraEM2" name="cContraseña" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseña2E">Falta La Confirmacion</p><br>
                     <p class="falta ocultar" id="fVerificacionE">No Coincide La Contraseña</p><br>
             
                     <input class="input1"  type="checkbox">Acepta los terminos y condiciones<br>
                     <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br><br>
-                    <button onclick="ValidarEmpresa()" class="boton2">Crear cuenta en Que Oferton!</button><br>
+                    <button onclick="ValidarEmpresa()" id="crearEmpresa" class="boton2">Crear cuenta en Que Oferton!</button><br>
         </form>
             <br> 
 
@@ -257,6 +257,9 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/controladoresSuperUsuario.js"></script>
+    <script src="js/registrarUsuario.js"></script>
+    <script src="js/registroEmpresa.js"></script>
+
+    
 </body>
 </html>
