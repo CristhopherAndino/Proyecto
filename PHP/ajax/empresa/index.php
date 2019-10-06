@@ -18,21 +18,26 @@
             $_POST['telefono'],
             $_POST['correo'],
             $_POST['contraseña'],
-            $_POST['cContraseña']
+            $_POST['cContraseña'],
+            $_POST['plan']
         );
         echo $E->crear($database->getDB());
+        exit();
     }
 
     if($_SERVER['REQUEST_METHOD'] == 'GET' && !isset($_GET['id'])){
         Empresa::ObtenerEmpresas($database->getDB());
+        exit();
 
     }
     if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
         Empresa::ObtenerEmpresa($database->getDB(), $_GET['id']);
+        exit();
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'DELETE' && isset($_GET['id'])) {
-        Empresa::Eliminar($database->getDB(), $_GET['id']);   
+        Empresa::Eliminar($database->getDB(), $_GET['id']);
+        exit();   
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'PUT' && isset($_GET['id'])) {
@@ -41,20 +46,22 @@
         parse_str(file_get_contents("php://input"),$_PUT);
         
         $E = new Empresa(
-            $_PUT['nombre'],
-            $_PUT['pais'],
-            $_PUT['dirreccion'],
-            $_PUT['latitud'],
-            $_PUT['longitud'],
-            $_PUT['facebook'],
-            $_PUT['instagram'],
-            $_PUT['twitter'],
-            $_PUT['telefono'],
-            $_PUT['correo'],
-            $_PUT['contraseña'],
-            $_PUT['cContraseña']
+            $_PUT['nombreE'],
+            $_PUT['paisE'],
+            $_PUT['dirreccionE'],
+            $_PUT['latitudE'],
+            $_PUT['longitudE'],
+            $_PUT['facebookE'],
+            $_PUT['instagramE'],
+            $_PUT['twitterE'],
+            $_PUT['telefonoE'],
+            $_PUT['correoE'],
+            $_PUT['contraseñaE'],
+            $_PUT['cContraseñaE'],
+            $_PUT['planE']
         );
 
         echo $E->acualizar($database->getDB(), $_GET['id']);
+        exit();
     }
 ?>

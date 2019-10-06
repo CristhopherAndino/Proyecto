@@ -13,6 +13,7 @@ class Empresa{
     private $correo; 
     private $contraseña; 
     private $cContraseña; 
+    private $plan;
 
     public function __construct(
         $nombre,
@@ -26,7 +27,8 @@ class Empresa{
         $telefono,
         $correo,
         $contraseña,
-        $cContraseña  
+        $cContraseña,
+        $plan 
     ){
         $this->nombre = $nombre;
         $this->pais = $pais;
@@ -40,6 +42,7 @@ class Empresa{
         $this->correo = $correo;
         $this->contraseña = $contraseña;
         $this->cContraseña = $cContraseña;
+        $this->plan = $plan;
     }
 
     public function data(){
@@ -53,8 +56,9 @@ class Empresa{
         $registro['twitter']=$this->twitter;
         $registro['telefono']=$this->telefono;
         $registro['correo']=$this->correo;
-        $registro['contraseña']=$this->contraseña;
-        $registro['cContraseña']=$this->cContraseña;
+        $registro['plan']=$this->plan;
+        $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
+        $registro['cContraseña'] = password_hash($this->cContraseña,PASSWORD_DEFAULT);
         return $registro;
     }
 

@@ -24,45 +24,22 @@
 
     
     <div>
-            
-            <div>
-                    <center>
-                    <div class="F">
-                        <br>
-                        <center>
-                                <h1>Planes Actuales</h1><br>
-                        </center>
-                        <div class="D">
-                        <div class="cBoton">
-                            <center>
-                        <div>
-                            <button id="p1" class="bPromo">Basico</button>
-                            <h5>Mes</h5>
-                            <h5>USD7.99</h5>
-                        </div>
-                            </center>
-                            <center>
-                        <div>
-                            <button id="p2" class="bPromo">Estandar</button>
-                            <h5>6 Meses</h5>
-                            <h5>USD10.99</h5>
-                        </div>
-                    </center>
-                        <center>
-                        <div>
-                            <button id="p3" class="bPromo">Premium</button>
-                            <h5>1 Año</h5>
-                            <h5>USD13.99</h5>
-                        </div>
-                        </center>
-                        
-                    </div>
-                    
-                    </div>
-                    <br>
-                </div>
+        <center>
+            <table class="contenedor2 table table-striped table-hover table-responsive">
+                    <h2 class="letras">Planes</h2>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Tiempo</th>
+                        <th>Accion</th>
+                    </tr>
+                    <tbody id="tablaPlanes">    
+                    </tbody>
+                    <button id="ActCrearP" class="boton2">Crear Plan</button>
+                </table>
             </center>
-                </div>
+            
+            
                 <br>
                 <div class="caja">
                         <h2 class="letras">Usuarios</h2><br> <h2 class="letras">Empresas</h2><br>   
@@ -95,16 +72,25 @@
                             <th>Telefono</th>
                             <th>Email</th>
                             <th>Contraseña</th>
+                            <th>Plan</th>
                             <th>Accion</th>
                     </tr>
+                    <tbody id="tablaRegistroE">
+                            
+                    </tbody>
                     </table>
             </div>
     </div>
-
-    <form id="t">
-    
-
-    </form>
+    <form class="ventanaIndex " id="ventana">
+            <div class="popup " id="popup">
+                <u><h2>Crear Plan</h2></u><br> 
+                <input name="nombreCPl"  id="nombreCPl" class="input1" type="text" placeholder="Nombre"><br>
+                <input name="cantidadCPl"  id="cantidadCPl" class="input1" type="number" placeholder="Cantidad"><br>
+                <input name="tiempoCPl"  id="tiempoCPl" class="input1" type="text" placeholder="Tiempo"><br>       
+                <p class="falta ocultar" id="faltaT">Hay un campo sin llenar</p><br>
+                <button id="planCreado" class="boton3">Plan Completo</button>
+            </div>
+        </form>
 
     <hr class="linea-r">
     <script src="../js/jquery-3.4.1.min.js"></script>

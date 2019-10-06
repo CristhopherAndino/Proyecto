@@ -37,8 +37,8 @@ class Usuarios{
         $registro['genero']=$this->genero;
         $registro['pais']=$this->pais;
         $registro['correo']=$this->correo;
-        $registro['contrasena']=$this->contrasena;
-        $registro['cContrasena']=$this->cContrasena;
+        $registro['contrasena'] = password_hash($this->contrasena,PASSWORD_DEFAULT);
+        $registro['cContrasena']= password_hash($this->cContrasena,PASSWORD_DEFAULT);
         return $registro;
     }
 

@@ -4,7 +4,6 @@
     width: 45%;
     border: rgb(0, 0, 0)2px solid;
     border-radius: 10px;
-    overflow-y: scroll;
     overflow-x: scroll;
 }
 
@@ -14,4 +13,17 @@
 
 .letras{
     padding: 1% 21% 1% 21%;
+}
+
+.marvinE{
+    margin: 0px !important;
+}
+
+.contenedor2{
+    margin: 10px 10px 10px 55px;
+    padding: 10px;
+    width: 20%;
+    border: rgb(0, 0, 0)2px solid;
+    border-radius: 10px;
+    overflow-x: scroll;
 }
