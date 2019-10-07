@@ -208,7 +208,7 @@ text-align: center;
 
 .cajaEmpresa{
     border: #0099ff 3px solid;
-    width: 50%;
+    width: 100%;
     margin: 15px;
     padding: 10px;
     border-radius: 15px;
@@ -216,11 +216,11 @@ text-align: center;
 }
 
 .cajaEmpresa2{
-    width: 97%;
+    width: 100%;
 }
 
 .cajaEmpresa3{
-    width: 50%;
+    width: 100%;
 }
 
 .boton:hover{

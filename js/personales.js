@@ -97,54 +97,6 @@ cerrarIndex.addEventListener('click', function(){
     popup.classList.remove('activo');
 });
 
-abrirPromo.addEventListener('click', function(){
-    popupPromo.classList.add('A');
-    ventanasPromo.classList.add('activo');
-    popupPromo.classList.add('activo');
-});
-
-cerrarPromo.addEventListener('click', function(){
-    ventanasPromo.classList.remove('activo');
-    popupPromo.classList.remove('activo');
-    popupPromo.classList.remove('A');
-});
-
-p1.addEventListener('click', function(){
-    ventanasPromo.classList.remove('activo');
-    popupPromo.classList.remove('activo');
-    popupPromo.classList.remove('A');
-    ventana.classList.add('ocultar');
-    empresa.classList.remove('ocultar');
-    bInicio.classList.remove('ocultar');
-    abrir3.classList.add('ocultar');
-    usuario.classList.add('ocultar');
-    abrir2.classList.remove('ocultar');
-});
-
-p2.addEventListener('click', function(){
-    ventanasPromo.classList.remove('activo');
-    popupPromo.classList.remove('activo');
-    popupPromo.classList.remove('A');
-    ventana.classList.add('ocultar');
-    empresa.classList.remove('ocultar');
-    bInicio.classList.remove('ocultar');
-    abrir3.classList.add('ocultar');
-    usuario.classList.add('ocultar');
-    abrir2.classList.remove('ocultar');
-});
-
-p3.addEventListener('click', function(){
-    ventanasPromo.classList.remove('activo');
-    popupPromo.classList.remove('activo');
-    popupPromo.classList.remove('A');
-    ventana.classList.add('ocultar');
-    empresa.classList.remove('ocultar');
-    bInicio.classList.remove('ocultar');
-    abrir3.classList.add('ocultar');
-    usuario.classList.add('ocultar');
-    abrir2.classList.remove('ocultar');
-});
-
 //validar registro//
 function ValidarUsuario(){
     if (usuario.nombreU.value == "") {

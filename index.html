@@ -20,7 +20,6 @@
                 <button class="boton text-center" id="abrir2">Registrar Usuario</button>
                 <button class="boton text-center" id="abrir3">Registro Empresas</button>
                 <button onclick="location='paginas/muro.html'" class="boton text-center" >Ver Ofertones!</button>
-                <button class="boton text-center" id="abrirPromo">Plan de pagos</button>
         </center>            
     </div>
     <hr class="linea-r">
@@ -67,7 +66,7 @@
                 <p class="falta ocultar" id="fPais">Falta El Pais</p>
     
                 <h4>Foto de perfil</h4><br>
-                <input required="" class="input1" name="foto" type="file"><br>
+                <input required="" class="input1" name="foto" type="file" accept="image/*"><br>
         
                 <h4>Correo Electronico</h4><br>
                 <input required=""  id="correoU" name="correo" class="input1" type="email"><br>
@@ -89,21 +88,24 @@
                 <button class="boton2" id="crearU" onclick="ValidarUsuario()">Crear cuenta en Que Oferton!</button><br>
             </center>         
             <br>
-        </form>
+            
 
+           
+        </form>
             <form class="rEmpresa ocultar" id="empresa">
+
                     <br>
                     <header>
                             <u><h2>Crear cuenta</h2></u><br>
                     </header>
             
                     <h4>Nombre de la empresa</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="nombreE" name="nombre" class="input1"  type="text"><br>
+                    <input  id="nombreE" name="nombre" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fNombreE">Falta Nombre</p><br>
                     
             
                     <h4>Pais</h4><br>
-                    <select required="" id="paisE" name="pais" class="input1">
+                    <select  id="paisE" name="pais" class="input1">
                         <option value="0">Vacio</option>
                         <option value="1">Honduras</option>
                         <option value="2">Guatemala</option>
@@ -115,42 +117,53 @@
                     <p class="falta ocultar" id="fPaisE">Falta Pais</p><br>
             
                     <h4>Dirreccion</h4><br>
-                    <input required="" required="" id="dirreccionE" name="dirreccion" class="input1"  type="text"><br>
+                    <input  id="dirreccionE" name="dirreccion" class="input1"  type="text"><br>
                     <p class="falta ocultar" id="fDirreccionE">Falta Dirreccion</p><br>
                     
                     <h4>Latitud y Logitud</h4><br>
-                    <input required="" class="input1" id="longitudE" name="latitud" type="number" placeholder="Latitud"><input id="latitudE" name="longitud" class="input1"  type="number" placeholder="Longitud"><br>
+                    <input  class="input1" id="longitudE" name="latitud" type="number" placeholder="Latitud"><input  id="latitudE" name="longitud" class="input1"  type="number" placeholder="Longitud"><br>
                     <p class="falta ocultar" id="fLongitudE">Falta Longitud</p><br>
                     <p class="falta ocultar" id="fLatitudE">Falta Latitud</p><br>
 
                     <h4>Redes Sociales</h4><br>
-                    <input required="" minlength="4" maxlength="25" class="input1" id="facebookE" name="facebook"  value="" type="url" placeholder="Facebook"><input required="" minlength="4" maxlength="25" class="input1" id="InstagramE" name="instagram" value="" type="url" placeholder="Instagram"><input required="" minlength="4" maxlength="25" class="input1" id="TwitterE" name="twitter" value="" type="url" placeholder="Twitter"><br>
+                    <input  class="input1" id="facebookE" name="facebook"  value="" type="url" placeholder="Facebook"><input  minlength="4" maxlength="25" class="input1" id="InstagramE" name="instagram" value="" type="url" placeholder="Instagram"><input  minlength="4" maxlength="25" class="input1" id="TwitterE" name="twitter" value="" type="url" placeholder="Twitter"><br>
                     <p class="falta ocultar" id="fFacebookE">Falta Facebook</p><br>
                     <p class="falta ocultar" id="fInstagramE">Falta Instagram</p><br>
                     <p class="falta ocultar" id="fTwitterE">Falta Twitter</p><br>
                     
                     <h4>Telefono</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="telefonoE" name="telefono" class="input1"  type="tel"><br>
+                    <input  id="telefonoE" name="telefono" class="input1"  type="tel"><br>
                     <p class="falta ocultar" id="fTelefonoE">Falta Telefono</p><br>
             
                     <h4>Banner</h4><br>
-                    <input required="" class="input1"  type="file" ><br>
+                    <input class="input1"  type="file" accept="image/*"><br>
                     
                     <h4>Logotipo</h4><br> 
-                    <input required="" class="input1"  type="file" ><br>
+                    <input class="input1"  type="file" accept="image/*"><br>
             
                     <h4>Correo Electronico</h4><br>
-                    <input required="" id="correoE" name="correo" class="input1"  type="url" ><br>
+                    <input  id="correoE" name="correo" class="input1"  type="url" ><br>
                     <p class="falta ocultar" id="fCorreoE">Falta Correo</p><br>
             
                     <h4>Contraseña</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="contraEM" name="contraseña" class="input1"  type="password"><br>
+                    <input  id="contraEM" name="contraseña" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseñaE">Falta Contraseña</p><br>
                 
                     <h4>Confirmar la contraseña</h4><br>
-                    <input required="" minlength="4" maxlength="25" id="contraEM2" name="cContraseña" class="input1"  type="password"><br>
+                    <input  id="contraEM2" name="cContraseña" class="input1"  type="password"><br>
                     <p class="falta ocultar" id="fContraseña2E">Falta La Confirmacion</p><br>
                     <p class="falta ocultar" id="fVerificacionE">No Coincide La Contraseña</p><br>
+                    <h4>Elije Tu Paln</h4>
+                    <table class="contenedor2 table table-striped table-hover table-responsive">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Tiempo</th>
+                            <th>Accion</th>
+                        </tr>
+                        <tbody id="tablaPlanesI">    
+                        </tbody>
+                    </table>
             
                     <input class="input1"  type="checkbox">Acepta los terminos y condiciones<br>
                     <a href="paginas/terminos-condiciones.html" class="letrasR" target="blank">Ver los terminos y condiciones</a><br><br>
@@ -223,38 +236,7 @@
             <span>¿Primera vez en Que Oferton!?</span><button class="boton3" id="abrir4">Registrate Ya</button>
         </div>
     </div>
-
-    <div class="ventanaIndex ocultar" id="ventanasPromo">
-        <div class="popup" id="popupPromo">
-                <a class="cerrarIndex" id="cerrarPromo" href="#">Cerrar</a><br>
-            <center>
-                    <h1>Elija Su Plan Favorito</h1>
-            </center>
-            <div class="cBoton">
-                <center>
-            <div>
-                <button id="p1" class="bPromo">Basico</button>
-                <h5>Mes</h5>
-                <h5>USD7.99</h5>
-            </div>
-                </center>
-                <center>
-            <div>
-                <button id="p2" class="bPromo">Estandar</button>
-                <h5>6 Meses</h5>
-                <h5>USD10.99</h5>
-            </div>
-        </center>
-            <center>
-            <div>
-                <button id="p3" class="bPromo">Premium</button>
-                <h5>1 Año</h5>
-                <h5>USD13.99</h5>
-            </div>
-            </center>
-        </div>
-        </div>
-    </div>
+    
     <script src="js/personales.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>

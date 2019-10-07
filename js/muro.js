@@ -35,13 +35,6 @@ botonInicioMuro.addEventListener('click', function(){
     muroPopup.classList.add('activo');
 });
 
-abrirRegistroMuro.addEventListener('click', function(){
-    muroSeccion.classList.remove('activo');
-    muroPopup.classList.remove('activo');
-    muroT.classList.add('ocultar');
-    usuarioMuro.classList.remove('ocultar');
-});
-
 function validar(){
     if (correoM.value == "") {
         fcorreoM.classList.remove('ocultar');

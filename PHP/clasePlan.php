@@ -23,7 +23,7 @@ class Plan{
 
     public function crear($db){
         $plan = $this->data();
-        $resultado = $db->getReference('plan')->push($plan);
+        $resultado = $db->getReference('usuarios')->push($plan);
 
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro almacenado","key":"'.$resultado->getKey().'"}';
@@ -42,7 +42,36 @@ class Plan{
     $db->getReference('plan')->getChild($id)->remove();
 
     }
+
+    public function getNombre(){
+        return $this->nombre;
+    }
+
+     
+    public function setNombre($nombre){
+        $this->nombre = $nombre;
+        return $this;
+    }
+
+    
+    public function getCantidad(){
+        return $this->cantidad;
+    }
+
+    public function setCantidad($cantidad){
+        $this->cantidad = $cantidad;
+
+        return $this;
+    }
+
+    public function getTiempo(){
+        return $this->tiempo;
+    }
+
+    public function setTiempo($tiempo){
+        $this->tiempo = $tiempo;
+
+        return $this;
+    }
 }
-
-
 ?>

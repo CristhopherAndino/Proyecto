@@ -19,7 +19,11 @@
             $_POST['correo'],
             $_POST['contraseña'],
             $_POST['cContraseña'],
-            $_POST['plan']
+            array(
+                'nombre' => $_POST['nombreP'],
+                'cantidad' => $_POST['cantidadP'],
+                'tiempo' => $_POST['tiempoP']
+            )
         );
         echo $E->crear($database->getDB());
         exit();
@@ -58,7 +62,11 @@
             $_PUT['correoE'],
             $_PUT['contraseñaE'],
             $_PUT['cContraseñaE'],
-            $_PUT['planE']
+            array(
+                'nombre' => $_PUT['nombreP'],
+                'cantidad' => $_PUT['cantidadP'],
+                'tiempo' => $_PUT['tiempoP']
+            )
         );
 
         echo $E->acualizar($database->getDB(), $_GET['id']);

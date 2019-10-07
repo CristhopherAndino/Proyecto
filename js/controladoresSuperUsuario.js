@@ -288,7 +288,7 @@ function edicionCE(id) {
 
 //planes
 $("#planCreado").click(function(){
-    if($('#nombreCPl').val() != " " && $('#cantidadCPl').val() != " " && $('#tiempoCPl').val() != " "){
+    if($('#nombreCPl').val() != " " && $('#cantidadCPl').val() != 0 && $('#tiempoCPl').val() != " "){
         $('#faltaT').addClass('ocultar');
         var parametros = $('#ventana').serialize();
     $.ajax({
@@ -305,7 +305,7 @@ $("#planCreado").click(function(){
     });
     }else{
         $('#faltaT').removeClass('ocultar');
-       
+              
     }
     
 });
