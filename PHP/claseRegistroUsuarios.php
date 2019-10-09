@@ -8,7 +8,8 @@ class Usuarios{
     private $pais;
     private $correo;
     private $contrasena;
-    private $cContrasena;  
+    private $cContrasena;
+    private $foto;  
 
     public function __construct(
         $nombre,
@@ -18,7 +19,8 @@ class Usuarios{
         $pais,
         $correo,
         $contrasena,
-        $cContrasena  
+        $cContrasena,
+        $foto  
     ){
         $this->nombre = $nombre;
         $this->apellido = $apellido;
@@ -28,6 +30,7 @@ class Usuarios{
         $this->correo = $correo;
         $this->contrasena = $contrasena;
         $this->cContrasena = $cContrasena;
+        $this->foto = $foto;
     }
 
     public function data(){
@@ -39,6 +42,7 @@ class Usuarios{
         $registro['correo']=$this->correo;
         $registro['contrasena'] = password_hash($this->contrasena,PASSWORD_DEFAULT);
         $registro['cContrasena']= password_hash($this->cContrasena,PASSWORD_DEFAULT);
+        $registro['foto']=$this->foto;
         return $registro;
     }
 
@@ -76,6 +80,13 @@ class Usuarios{
         }else{
             return '{"Mensajes":"Error al guardar el registro"}';
         }
+    }
+
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+
+        return $this;
     }
 }
 ?>

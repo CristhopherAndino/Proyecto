@@ -7,7 +7,6 @@ $("#crearU").on("click", function(){
         data:parametros,
         dataType:"json",
         success:(res)=>{
-
         },
         error:(error)=>{
             console.error(error);

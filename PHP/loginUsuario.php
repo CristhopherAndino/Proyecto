@@ -5,7 +5,7 @@ class LoginUsuario{
         $resultado = $db->getReference('usuarios')->orderByChild('correo')->equalTo($correo)->getSnapshot()->getValue();
 
       $key = array_key_first($resultado);
-        $validar = password_verify($contrasena, $resultado[$key]['contrasena']);
+      $validar = password_verify($contrasena, $resultado[$key]['contrasena']);
         
         $respuesta["valido"] =  $validar==1?true:false;
         if ($respuesta["valido"]) {
@@ -16,7 +16,7 @@ class LoginUsuario{
             setcookie('key',$respuesta["correo"],time() + (86400 * 30), "/");
             setcookie('key',$respuesta["token"],time() + (86400 * 30), "/");
         }
-
+        
         echo json_encode($respuesta);
     }
 }

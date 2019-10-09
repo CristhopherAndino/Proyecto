@@ -147,19 +147,6 @@ function ValidarUsuario(){
 
     }
 }
-
-function ValidarInicio(){
-    if(correoI.value == ""){
-        fcorreoI.classList.remove('ocultar');
-    }else{
-        fcorreoI.classList.add('ocultar');
-    }
-    if(contraI.value == ""){
-        fContraI.classList.remove('ocultar');
-    }else{
-        fContraI.classList.add('ocultar');
-    }
-}
 function ValidarEmpresa(){
     if(empresa.nombreE.value == ""){
         fNombreE.classList.remove("ocultar");  

@@ -35,9 +35,3 @@ perfilEmpresa.addEventListener('click', function(){
     ventanaPerfil.classList.add('activo');
     popupPerfil.classList.add('activo');
 });
-
-cerrarEmpresaPerfil.addEventListener('click', function(){
-    ventanaPerfil.classList.remove('activo');
-    popupPerfil.classList.remove('activo');
-});
-

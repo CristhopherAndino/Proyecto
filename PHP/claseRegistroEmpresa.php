@@ -13,7 +13,11 @@ class Empresa{
     private $correo; 
     private $contraseña; 
     private $cContraseña; 
+    private $seguidore;
+    private $ventas;
     private $plan;
+    private $banner;
+    private $logotipo;
 
     public function __construct(
         $nombre,
@@ -28,7 +32,11 @@ class Empresa{
         $correo,
         $contraseña,
         $cContraseña,
-        $plan 
+        $seguidore,
+        $ventas,
+        $plan,
+        $banner,
+        $logotipo
     ){
         $this->nombre = $nombre;
         $this->pais = $pais;
@@ -43,6 +51,10 @@ class Empresa{
         $this->contraseña = $contraseña;
         $this->cContraseña = $cContraseña;
         $this->plan = $plan;
+        $this->seguidore = $seguidore;
+        $this->ventas = $ventas;
+        $this->banner = $banner;
+        $this->logotipo = $logotipo;
     }
 
     public function data(){
@@ -57,9 +69,51 @@ class Empresa{
         $registro['telefono']=$this->telefono;
         $registro['correo']=$this->correo;
         $registro['plan']=$this->plan;
+        $registro['seguidore']=$this->seguidore;
+        $registro['ventas']=$this->ventas;
+        $registro['banner']=$this->banner;
+        $registro['logotipo']=$this->logotipo;
         $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
         $registro['cContraseña'] = password_hash($this->cContraseña,PASSWORD_DEFAULT);
         return $registro;
+    }
+
+    public function dataPlan(){
+        $resultado['plan'] = $this->plan;
+        return $resultado;
+    }
+
+    public function dataEP(){
+        $registro['nombre']=$this->nombre;
+        $registro['pais']=$this->pais;
+        $registro['dirreccion']=$this->dirreccion;
+        $registro['latitud']=$this->latitud;
+        $registro['longitud']=$this->longitud;
+        $registro['facebook']=$this->facebook;
+        $registro['instagram']=$this->instagram;
+        $registro['twitter']=$this->twitter;
+        $registro['telefono']=$this->telefono;
+        $registro['correo']=$this->correo;
+        $registro['banner']=$this->banner;
+        $registro['logotipo']=$this->logotipo;
+        $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
+        $registro['cContraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
+        return $registro;
+    }
+
+    public function databanner(){
+        $registro['banner'] = $this->banner;
+        return $registro;
+    }
+
+    public function datalogotipo(){
+        $registro['logotipo'] = $this->logotipo;
+        return $registro;
+    }
+
+    public static function ObtenerEmpresas($db){
+        $resultado = $db->getReference('Empresa')->getSnapshot()->getValue();
+        echo json_encode($resultado);
     }
 
     public function crear($db){
@@ -73,29 +127,25 @@ class Empresa{
         }
     }
 
-    public static function ObtenerEmpresas($db){
-        $resultado = $db->getReference('Empresa')->getSnapshot()->getValue();
-        echo json_encode($resultado);
-    }
-
-    public static function ObtenerEmpresa($db, $id){
-        $resultado = $db->getReference('Empresa')->getChild($id)->getValue();
-        echo json_encode($resultado);
-    }
-
-    public static function Eliminar($db, $id){
-        $db->getReference('Empresa')->getChild($id)->remove();
-        echo '{"Mensaje":"Registro borrado"}';
-    }
-
-    public function acualizar($db, $id){
-        $resultado = $db->getReference('Empresa')->getChild($id)->set($this->data());
+    public function editarPlan($db, $id){
+        $resultado = $db->getReference('Empresa')->getChild($id)->update($this->dataPlan());
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
         }else{
             return '{"Mensajes":"Error al guardar el registro"}';
         }
     }
+
+    public function editarPerfilE($db, $id){
+        //$this->cContraseña = $contraseña;
+        $resultado = $db->getReference('Empresa')->getChild($id)->update($this->dataEP());
+        if($resultado->getKey() != null){
+            return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
+        }else{
+            return '{"Mensajes":"Error al guardar el registro"}';
+        }
+    }
+    
 
 }
 ?>

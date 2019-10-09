@@ -227,11 +227,11 @@
             <a class="cerrarIndex" id="cerrarIndex" href="#">Cerrar</a><br>
             <u><h2>Iniciar Secion</h2></u><br>
             <form id="formularioI">        
-            <input name="correo" id="correoI" class="input1" type="text" placeholder="Correo Electronico"><br>
+            <input required="" name="correo" id="correoI" class="input1" type="text" placeholder="Correo Electronico"><br>
             <p class="falta ocultar" id="fcorreoI">Falta Correo</p><br>
-            <input name="contrasena" id="contraI" class="input1" type="password" placeholder="Contraseña"><br>
+            <input required="" name="contrasena" id="contraI" class="input1" type="password" placeholder="Contraseña"><br>
             <p class="falta ocultar" id="fContraI">Falta contraseña</p><br>
-            <button onclick="ValidarInicio()" id="inicioI" class="boton2">Iniciar Secion</button><br>
+            <button id="inicioI" class="boton2">Iniciar Secion</button><br>
             </form>
             <span>¿Primera vez en Que Oferton!?</span><button class="boton3" id="abrir4">Registrate Ya</button>
         </div>
@@ -243,6 +243,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/registrarUsuario.js"></script>
     <script src="js/registroEmpresa.js"></script>
-    <script src="js/loginUsuario.js"></script>    
+    <script src="js/controladorLoginUsuario.js"></script>    
 </body>
 </html>
