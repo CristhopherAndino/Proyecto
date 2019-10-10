@@ -24,12 +24,19 @@
             array(
                 'nombre' => $_POST['nombreP'],
                 'cantidad' => $_POST['cantidadP'],
-                'tiempo' => $_POST['tiempoP']
-            )
+                'tiempo' => $_POST['tiempoP'],
+            ),
+            $_POST['banner'],
+            $_POST['logotipo']
         );
         echo $E->crear($database->getDB());
         exit();
     }
+
+    if ($_SERVER['REQUEST_METHOD'] == 'DELETE' && isset($_GET['id'])) {
+          Empresa::Eliminar($database->getDB(), $_GET['id']);
+          exit();   
+      }
 
     if($_SERVER['REQUEST_METHOD'] == 'GET' && !isset($_GET['id'])){
         Empresa::ObtenerEmpresas($database->getDB());

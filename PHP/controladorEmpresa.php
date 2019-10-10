@@ -57,8 +57,8 @@ class controladoE{
         $registro['telefono']=$this->telefono;
         $registro['correo']=$this->correo;
         $registro['plan']=$this->plan;
-        $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
-        $registro['cContraseña'] = password_hash($this->cContraseña,PASSWORD_DEFAULT);
+        $registro['contraseña'] = $this->contraseña;
+        $registro['cContraseña'] = $this->cContraseña;
         return $registro;
     }
     

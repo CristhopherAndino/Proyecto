@@ -23,7 +23,7 @@ class Plan{
 
     public function crear($db){
         $plan = $this->data();
-        $resultado = $db->getReference('usuarios')->push($plan);
+        $resultado = $db->getReference('plan')->push($plan);
 
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro almacenado","key":"'.$resultado->getKey().'"}';

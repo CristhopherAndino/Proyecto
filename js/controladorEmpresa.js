@@ -1,5 +1,6 @@
 var idG = "-Lqk_-GjCAVKgQ7h5Umz";
 
+
 (()=>{
     $.ajax({
         url:"../PHP/ajax/controladorEmpresa/?id="+idG,
@@ -8,7 +9,23 @@ var idG = "-Lqk_-GjCAVKgQ7h5Umz";
         success:(res)=>{
             llenarTabla(res); 
             Publicidad(res);  
-            Oferton(res);        
+            Oferton(res);
+            grafica(res);
+                 
+        },
+        error:(error)=>{
+            console.log(error);
+        }
+    })
+})();
+
+(()=>{
+    $.ajax({
+        url:"../PHP/ajax/sucursales/",
+        method:"GET",
+        dataType:"json",
+        success:(res)=>{
+            sucursalesLlenar(res);       
         },
         error:(error)=>{
             console.log(error);
@@ -21,12 +38,14 @@ function Publicidad(usuario){
     $('#pulicidad').append(
         `<center>
         <h2>Registro De Productos</h2><br>
-        <input name="nombreP" class="input1" type="text" placeholder="Nombre">
-        <input name="precioP" class="input1" type="text" placeholder="Presio"><br>
+        <input required="" name="nombreP" id="nombreP" class="input1" type="text" placeholder="Nombre">
+        <input required="" name="precioP" id="precioP" class="input1" type="number" placeholder="Presio"><br>
         <h6>Fotografia</h6>
         <input name="nombreE" class="ocultar" type="text" value="${usuario.nombre}"><br>
         <input name="fotoP" class="input1" type="file" accept="image/*"><br>
-        <input name="informacionP" class="input2" type="text" placeholder="informacion"><br><br>
+        <input required="" name="informacionP" id="informacionP" class="input2" type="text" placeholder="informacion"><br><br>
+        <p class="falta ocultar" id="faltaCP">Falta llenar Un Campo</p><br>
+        <p class="falta ocultar" id="faltaCPY">Ya a Sido publicado</p><br>
         <button class="boton2" onclick="publicar()">Publicar</button>
         </center>`
     );
@@ -34,14 +53,16 @@ function Publicidad(usuario){
 
 
 //graficas
+function grafica(res){
+    
 $(function($){
     $('#graficasS').highcharts({
         title:{text:'Segidores'},
-        xAxis:{categories:['Octubre']},
+        xAxis:{categories:['Agoste','Septiempre','Octubre']},
         yAxis:{title:'Porsentaje %'},plotLines:[{value:0,width:1,color:'#808080'}],
         tooltip:{valueSuffix:'%'},
         legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
-        series:[{name: 'Seguidores', data:[25]}]
+        series:[{name: 'Seguidores', data:[25,45,76]}]
     });
 });
 
@@ -52,9 +73,10 @@ $(function($){
         yAxis:{title:'Porsentaje %'},plotLines:[{value:0,width:1,color:'#808080'}],
         tooltip:{valueSuffix:'%'},
         legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
-        series:[{name: 'Ventas', data:[25,23,21]}]
+        series:[{name: 'Ventas', data:[54,34,65]}]
     });
 });
+}
 
 //edicion
 
@@ -88,22 +110,23 @@ function llenarTabla(empresa){
         </div>
             </div>
             <form id="editarPerfil" class="ocultar">
-            <input name="nombre"  class="input1" type="text" name="nombre" value="${empresa.nombre}" placeholder="Nombre">
-            <input name="pais" class="input1" type="text" value="${empresa.pais}" placeholder="Pais">
-            <input name="dirreccion" class="input1" type="text" value="${empresa.dirreccion}" placeholder="Dirreccion">
-            <input name="longitud" class="input1" type="text" value="${empresa.longitud}" placeholder="Longitud"> , <input name="latitud" class="input1" type="text" value="${empresa.latitud}" placeholder="Latitud">
-            <input name="facebook" class="input1" type="text" value="${empresa.facebook}" placeholder="Facebook"><input name="instagram" class="input1" type="text" value="${empresa.instagram}" placeholder="Instagram"></h5><input name="twitter" class="input1"  type="text" value="${empresa.twitter}" placeholder="Twitter">
-            <input name="correo"  class="input1" type="text" value="${empresa.correo}" placeholder="Correo">
-            <input name="telefono"  class="input1" type="text" value="${empresa.telefono}" placeholder="Telefono">
+            <input required="" name="nombre" id="nombreEE"  class="input1" type="text" name="nombre" value="${empresa.nombre}" placeholder="Nombre">
+            <input required="" name="pais" id="paisEE" class="input1" type="text" value="${empresa.pais}" placeholder="Pais">
+            <input required="" name="dirreccion" id="dirreccionEE" class="input1" type="text" value="${empresa.dirreccion}" placeholder="Dirreccion">
+            <input required=""  name="longitud" id="longitudEE" class="input1" type="number" value="${empresa.longitud}" placeholder="Longitud"> , <input required="" name="latitud" id="latitudEE" class="input1" type="number" value="${empresa.latitud}" placeholder="Latitud">
+            <input required="" name="facebook" id="facebookEE" class="input1" type="text" value="${empresa.facebook}" placeholder="Facebook"><input required="" name="instagram" id="instagramEE" class="input1" type="text" value="${empresa.instagram}" placeholder="Instagram"></h5><input required="" name="twitter" id="twitterEE" class="input1"  type="text" value="${empresa.twitter}" placeholder="Twitter">
+            <input required="" name="correo" id="correoEE"  class="input1" type="text" value="${empresa.correo}" placeholder="Correo">
+            <input required="" name="telefono" id="telefonoEE"  class="input1" type="number" value="${empresa.telefono}" placeholder="Telefono">
             <input name="logotipo" id="logotipo" class="input1" value="${empresa.logotipo}" placeholder="Logotipo" type="file">
             <input name="banner" class="input1" value="${empresa.banner}" placeholder="Banner" type="file">
-            <input name="contraseña"  class="input1" type="text" value="hola" placeholder="contraseña"><br>
-
+            <input required="" name="contraseña" id="contraseña"  class="input1" type="text" value="${empresa.contraseña}" placeholder="contraseña"><br>
+            <p class="falta ocultar" id="faltaCEE">Falta llenar Un Campo</p><br>
             <button class="boton" id="caselarEE">Canselar</button>
             <button class="boton" id="editarC" onclick="edicionCompleta()">Edicion Completa</button>
-            </form>
+            </form>          
             </div>`
         );
+
 
         $('#editarPerfilEmpresa').click(function(){
             $('#cajaPerfilE').addClass('ocultar');
@@ -121,9 +144,32 @@ function llenarTabla(empresa){
             $('#editarPerfil').addClass('ocultar');
            
         });
+
+        $('#PSC').click(function(){
+            $('#tablaES').removeClass('ocultar');
+            $('#editarPerfil').addClass('ocultar');
+           
+        });
+}
+
+function sucursalesLlenar(surcusal){
+    $('#tablaSucursales').empty();
+    for (let Indice in surcusal) {
+       
+        $('#tablaSucursales').append(
+            `<tr id="${Indice}">
+            <th>${surcusal[Indice].nombre}</th>
+            <th>${surcusal[Indice].latitud}</th>
+            <th>${surcusal[Indice].longitud}</th>
+            <th>
+            </th>
+            </tr>`
+        );
+    }
 }
 
 function edicionCompleta(){
+    if($('#nombreEE').val() != " " && $('#paisEE').val() != " " && $('#dirreccionEE').val() != " " && $('#longitudEE').val() != 0 && $('#facebookEE').val() != " " && $('#correoEE').val() != " " && $('#telefonoEE').val() != 0 && $('#contraseña').val() != " " && $('#twitterEE').val() != " " && $('#latitudEE').val() != " " && $('#instagramEE').val() != " "){
     var parametros = $('#editarPerfil').serialize();
 $.ajax({
     url:"../PHP/ajax/ePerfil/?id="+idG,
@@ -136,10 +182,15 @@ $.ajax({
         console.error(error);
     }
 });
+$('#faltaCEE').addClass('ocultar');
+}else{
+    $('#faltaCEE').removeClass('ocultar');
+}
 }
 
 function publicar(){
-    var parametros = $('#pulicidad').serialize();
+    if($('#nombreP').val() != " " && $('#precioP').val() != 0 && $('#informacionP').val() != " "){
+        var parametros = $('#pulicidad').serialize();
     $.ajax({
         url:"../PHP/ajax/publicacionN/",
         method:"POST",
@@ -152,6 +203,12 @@ function publicar(){
             console.error(error);
         }
     });
+    $('#faltaCP').addClass('ocultar');
+    $('#faltaCPY').removeClass('ocultar');
+}else{
+    $('#faltaCP').removeClass('ocultar');
+
+}
 }
 
 function Oferton(usuario){
@@ -159,29 +216,24 @@ function Oferton(usuario){
     $('#ofertones').append(
         `<center>
         <h2>Registrar Oferto!</h2><br>
-    <input name="nombreE" class="input1 ocultar" type="text" value="${usuario.nombre}">    
-    <input name="descuento" class="input1" type="text" placeholder="Porcentaje De Descuento">
-    <input name="real"  class="input1" type="text" placeholder="Presio Real"><br>
-    <input name="Oferton" class="input1" type="text" placeholder="Precio De Oferto!"><br>
-    <p class="falta ocultar" id="fPaisE">Falta Porcentaje De Descuento</p><br>
-    <p class="falta ocultar" id="fPaisE">Falta Precio Real</p><br>
-    <p class="falta ocultar" id="fPaisE">Falta Precio De Oferton!</p><br>
-    <p class="falta ocultar" id="fPaisE">Falta Fecha De Efectividad</p><br>
+    <input required="" name="nombreE" id="nombreEO" class="input1 ocultar" type="text" value="${usuario.nombre}">    
+    <input required=""  name="descuento" id=" descuentoO" class="input1" type="number" placeholder="Porcentaje De Descuento">
+    <input required="" name="real" id="realO" class="input1" type="number" placeholder="Presio Real"><br>
+    <input required="" name="Oferton" id="OfertonO" class="input1" type="number" placeholder="Precio De Oferto!"><br>
     <p>Fecha De Inicio</p>
-    <input name="fechaI" class="input1" type="date"><br>
-    <p class="falta ocultar" id="fPaisE">Falta Fecha De Inicio</p><br>
+    <input required="" name="fechaI" id="fechaIO" class="input1" type="date"><br>
     <p>Fecha Final</p>
-    <input name="fechaF" class="input1" type="date">
-    <p class="falta ocultar" id="fPaisE">Falta Fecha Final</p><br>
-    <input name="sucursales" class="cajaEmpresa3 cajaEmpresa" placeholder="Sucursales" type="text">
-    <p  class="falta ocultar" id="fPaisE">Falta las Sucursales</p><br>
+    <input required="" name="fechaF" id="fechaFO" class="input1" type="date">
+    <input required="" name="sucursales" id="sucursalesO" class="cajaEmpresa3 cajaEmpresa" placeholder="Sucursales" type="text">
     <input name="foto" class="cajaEmpresa3 cajaEmpresa" type="file" placeholder="Imagen Del Producto" accept="image/*"><br>
+    <p class="falta ocultar" id="faltaCEEO">Falta llenar Un Campo</p><br>
 <button class="boton2" onclick="PublicarOfeton()">Publicar Oferton</button>
 </center>`
     );
 }
 
 function PublicarOfeton(){
+    if($('#nombreEO').val() != " " && $('#descuentoO').val() != 0 && $('#realO').val() != 0 && $('#OfertonO').val() != 0 && $('#fechaIO').val() != 0 && $('#fechaFO').val() != 0 && $('#sucursalesO').val() != " "){   
     var parametros = $('#ofertones').serialize();
     $.ajax({
         url:"../PHP/ajax/ofertones/",
@@ -195,8 +247,11 @@ function PublicarOfeton(){
             console.error(error);
         }
     });
+    $('#faltaCEEO').addClass('ocultar');
+}else{
+    $('#faltaCEEO').removeClass('ocultar');
 }
-
+}
 
 
 

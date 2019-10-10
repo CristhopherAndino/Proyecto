@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="shortcut icon" href="../imagenes/logo-conejo-pestana.ico">
+</head>
+<body>
+    <div id="barraM">
+        <hr class="linea-r">
+        <div class="barra"> 
+                    <img onclick="location='../index.html'" class="logo" id="conejo-muro" src="../imagenes/logo-conejo.png">
+                    <img onclick="location='../index.html'" class="logo" id="logo-muro" src="../imagenes/logo.jpg">
+                    <button id="perfil"><img src="../imagenes/imagen-muro.png"></button>    
+        </div>
+        <hr class="linea-r">
+    </div>
+        <br>
+
+        <div class="muro col-6" id="muroT">
+            <div class="publicaciones">
+                <div class="publicacionUna">
+                    <div>
+                            <a class="letra" id="letra" href="#">Seguir Empresa</a><br>
+                        <img class="imagenesP" src="../imagenes/publicaciones/500x500.jpg" >
+                        <div class="">
+                                <label><input name="calificacion" value="Malo" type="radio">Malo</label> 
+                                <label><input name="calificacion" value="Bueno" type="radio">Bueno</label> 
+                                <label><input name="calificacion" value="Excelente" type="radio">Excelente</label>
+                        </div>
+                        <input class="input1" type="text">
+
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="noti">
+                <u><h2>Notificaciones</h2></u><br>
+                <p>Quieres Ver Tus Notificaciones?</p><br>
+                <button class="boton2" id="botonInicioMuro">Iniciar Seccion</button>
+            </div>
+        </div>
+
+        <hr class="linea-r">
+        <center>
+        <u><h3>Fin De Los Ofertones!</h3></u>
+    </center>
+        <hr class="linea-r">
+        <div class="ventanaIndex ocultar" id="muroSeccion">
+            <div class="popup" id="muroPopup">
+                    <a class="cerrarIndex" id="cerrarMuro" href="#">Cerrar</a><br>
+                    
+            </div>
+        </div>
+        <script src="../js/muro.js"></script>
+        <script src="../js/controladorUsuario.js"></script>
+</body>
+</html>

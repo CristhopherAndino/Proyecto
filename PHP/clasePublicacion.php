@@ -38,6 +38,11 @@ class Publicidad{
         return $respuesta;
     }
 
+    public function dataFoto(){
+        $respuesta['fotoP']  = $this->fotoP;
+        return $respuesta;
+    }
+
     public function crear($db){
         $pubicidad = $this->Data();
         $resultado = $db->getReference('publicacion')->push($pubicidad);
@@ -51,6 +56,15 @@ class Publicidad{
 
     public function agregarComentario($db, $id){
         $resultado = $db->getReference('publicacion')->getChild($id)->update($this->dataComentarios());
+        if($resultado->getKey() != null){
+            return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
+        }else{
+            return '{"Mensajes":"Error al guardar el registro"}';
+        }
+    }
+
+    public function agregarFoto($db, $id){
+        $resultado = $db->getReference('publicacion')->getChild($id)->update($this->dataFoto());
         if($resultado->getKey() != null){
             return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
         }else{

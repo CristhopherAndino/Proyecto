@@ -73,8 +73,8 @@ class Empresa{
         $registro['ventas']=$this->ventas;
         $registro['banner']=$this->banner;
         $registro['logotipo']=$this->logotipo;
-        $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
-        $registro['cContraseña'] = password_hash($this->cContraseña,PASSWORD_DEFAULT);
+        $registro['contraseña'] = $this->contraseña;
+        $registro['cContraseña'] = $this->cContraseña;
         return $registro;
     }
 
@@ -96,8 +96,8 @@ class Empresa{
         $registro['correo']=$this->correo;
         $registro['banner']=$this->banner;
         $registro['logotipo']=$this->logotipo;
-        $registro['contraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
-        $registro['cContraseña'] = password_hash($this->contraseña,PASSWORD_DEFAULT);
+        $registro['contraseña'] = $this->contraseña;
+        $registro['cContraseña'] = $this->contraseña;
         return $registro;
     }
 
@@ -136,6 +136,11 @@ class Empresa{
         }
     }
 
+    public static function Eliminar($db, $id){
+        $db->getReference('Empresa')->getChild($id)->remove();
+        echo '{"Mensaje":"Registro borrado"}';
+    }
+
     public function editarPerfilE($db, $id){
         //$this->cContraseña = $contraseña;
         $resultado = $db->getReference('Empresa')->getChild($id)->update($this->dataEP());
@@ -145,7 +150,14 @@ class Empresa{
             return '{"Mensajes":"Error al guardar el registro"}';
         }
     }
-    
 
+    public function banner($db,$id){
+        $resultado = $db->getReference('Empresa')->getChild($id)->update($this->dataEP());
+        if($resultado->getKey() != null){
+            return '{"Mesaje":"Resgistro actualizado","Key":"'.$resultado->getKey().'"';
+        }else{
+            return '{"Mensajes":"Error al guardar el registro"}';
+        }
+    } 
 }
 ?>

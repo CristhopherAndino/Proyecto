@@ -217,7 +217,7 @@ function ValidarEmpresa(){
         setTimeout('location="paginas/verificacionE.html"', 500);
 
     }
-    
+
 }
 
 

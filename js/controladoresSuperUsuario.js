@@ -197,7 +197,6 @@ function llenarTablaE(empresa){
             <th>${empresa[Indice].telefono}</th>
             <th>${empresa[Indice].correo}</th>
             <th>${empresa[Indice].contraseña}</th>
-            <th>${empresa[Indice].plan}</th>
             <th>
             <button class="boton2" onclick="eliminarE('${Indice}')">Eliminar</button>
             <!--<button class="boton3" onclick="editarE('${Indice}')">editar</button>-->
@@ -288,7 +287,8 @@ function edicionCE(id) {
 
 //planes
 $("#planCreado").click(function(){
-    if($('#nombreCPl').val() != " " && $('#cantidadCPl').val() != 0 && $('#tiempoCPl').val() != " "){
+    alert('hola')
+;    if($('#nombreCPl').val() != " " && $('#cantidadCPl').val() != 0 && $('#tiempoCPl').val() != " "){
         $('#faltaT').addClass('ocultar');
         var parametros = $('#ventana').serialize();
     $.ajax({
